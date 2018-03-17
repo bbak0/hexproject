@@ -54,8 +54,6 @@ def feed(request):
 def index(request):
     return render(request, 'hex/index.html', )
 
-def event_feed(request):
-    pass
 
 def event_view(request, event_id):
     event = Events.objects.get(pk=event_id)

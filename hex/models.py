@@ -15,8 +15,8 @@ PREFERENCES = (('KD', 'Children'),
 class Volunteer(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
     bio = models.TextField(max_length = 500, blank = True)
-	phone_regex = RegexValidator(regex = r'^\+?1?\d{9,15}$', message = "Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
-    phone_number = models.CharField(validators = [phone_regex], max_length = 17, blank = True)
+	#phone_regex = RegexValidator(regex = r'^\+?1?\d{9,15}$', message = "Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
+    #phone_number = models.CharField(validators = [phone_regex], max_length = 17, blank = True)
     location = models.CharField(max_length = 30, blank = True)
     birth_date = models.DateField(null = True, blank = True)
 	#preferences = MultiSelectField(choices = PREFERENCES, max_choices = 7, max_length = 14)
@@ -24,9 +24,9 @@ class Volunteer(models.Model):
 class Benefactor(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
     bio = models.TextField(max_length = 500, blank = True)
-    location = models.CharField(max_length = 30, blank = True) 
-	phone_regex = RegexValidator(regex = r'^\+?1?\d{9,15}$', message = "Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
-    phone_number = models.CharField(validators = [phone_regex], max_length = 17, blank = True)
+    location = models.CharField(max_length = 30, blank = True)
+	#phone_regex = RegexValidator(regex = r'^\+?1?\d{9,15}$', message = "Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed.")
+    #phone_number = models.CharField(validators = [phone_regex], max_length = 17, blank = True)
 
 class Organizer(models.Model):
 	user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
@@ -41,4 +41,3 @@ class Events(models.Model):
 	title = models.CharField(max_length = 50)
 	description = models.TextField()
 	organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
-	
