@@ -33,10 +33,8 @@ class Events(models.Model):
 	title = models.CharField(max_length = 50)
 	description = models.TextField()
 	organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
-<<<<<<< HEAD
-	objects = models.GeoManager()
-    point = models.PointField(srid = 4326)
-=======
+	#objects = models.GeoManager()
+    #point = models.PointField(srid = 4326)
 	'''objects = models.GeoManager()
     point = models.PointField(srid=4326)
 >>>>>>> a46ce1977998b4c9f1f398e67ab52132bee4b111
@@ -47,4 +45,3 @@ class Events(models.Model):
 <<<<<<< HEAD
 =======
 '''
->>>>>>> a46ce1977998b4c9f1f398e67ab52132bee4b111

@@ -73,3 +73,7 @@ def getUserType(id):
 
 def getVolunteerEvents(request):
     pass
+
+def create_event(request):
+
+    return render(request, 'hex/create-event.html', )
