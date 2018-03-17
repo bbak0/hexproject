@@ -1,169 +1,169 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  {%load static%}
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Parallax Template - Materialize</title>
-
-  <!-- CSS  -->
+  <title>de schimbat</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="{% static "hex/css/materialize.css" %}" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="{% static "hex/css/style.css" %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="{% static "hex/css/materialize.min.css"%}">
+    <link rel="stylesheet" href="{% static "hex/css/main.css"%}">
+  <style>
+    /* Reset. */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-size: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    /* Panels. */
+    .splitview {
+      position: relative;
+      width: 100%;
+      min-height: 45vw;
+      overflow: hidden;
+    }
+    .panel {
+      position: absolute;
+      width: 100vw;
+      min-height: 45vw;
+      overflow: hidden;
+    }
+    .panel .content {
+      position: absolute;
+      width: 100vw;
+      min-height: 45vw;
+      color: #FFF;
+    }
+    .panel .description {
+      width: 25%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+    }
+    .panel img {
+      box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.15);
+      width: 35%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .bottom {
+      background-color: rgb(44, 44, 44);
+      z-index: 1;
+    }
+    .bottom .description {
+      right: 5%;
+    }
+    .top {
+      background-color: rgb(77, 69, 173);
+      z-index: 2;
+      width: 50vw;
+      /*-webkit-clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
+      clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);*/
+    }
+    .top .description {
+      left: 5%;
+    }
+    /* Handle. */
+    .handle {
+      height: 100%;
+      position: absolute;
+      display: block;
+      background-color: rgb(253, 171, 0);
+      width: 5px;
+      top: 0;
+      left: 50%;
+      z-index: 3;
+    }
+    /* Skewed. */
+    .skewed .handle {
+      top: 50%;
+      transform: rotate(30deg) translateY(-50%);
+      height: 200%;
+      -webkit-transform-origin: top;
+      -moz-transform-origin: top;
+      transform-origin: top;
+    }
+    .skewed .top {
+      transform: skew(-30deg);
+      margin-left: -1000px;
+      width: calc(50vw + 1000px);
+    }
+    .skewed .top .content {
+      transform: skew(30deg);
+      margin-left: 1000px;
+    }
+    /* Responsive. */
+    @media (max-width: 900px) {
+      body {
+        font-size: 75%;
+      }
+    }
+  </style>
 </head>
-<body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo"><i class="large material-icons">layers</i> HEX2K18</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="{% url 'signup' %}">SIGN UP</a></li>
-        <li><a href="{% url 'login_view' %}">LOG IN</a></li>
 
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">HEX 2018</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-        <div class="row center">
-          <a href="#!" id="download-button" class="btn-large waves-effect waves-light red lighten-1">JOIN NOW !</a>
-        </div>
-        <br><br>
-
-      </div>
-    </div>
-    <div class="parallax"><img src="{% static "hex/images/handshake.jpg" %}"></div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">lightbulb_outline</i></h2>
-            <h5 class="center">Who we are?</h5>
-
-            <p class="light">We created a website in order to facilitate volunteering and charity. More precisely, we want a lot of <span style="font-weight:bold;">good deeds</span> in short time!</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">How can you help?</h5>
-
-            <p class="light">You can help in many ways! You can sign up as a volunteer, organizer or benefactor! We want <span style="font-weight: bold">you</span> to help the <span style="font-weight: bold">society</span> grow harmoniously. If you think that you may bear a hand, don't hesitate! Sign up now!</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">mood</i></h2>
-            <h5 class="center">Triple win!</h5>
-
-            <p class="light">It doesn't matter in which way are you helping, as long as the society benefits from it. <span style="font-weight: bold;">Organize, help, donate!</span></p>
-          </div>
-        </div>
+<body style="background-color: #2c2c2c;">
+<div class="splitview skewed">
+  <div class="panel bottom">
+    <div class="content">
+      <div class="description">
+        <h1 id="h1nebun1" style="font-size: 32px;">Society as we know it.</h1>
+        <p>We need the help of volunteers, organizers and benefactors in order to have a better society.</p>
       </div>
 
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/original-image.jpg" alt="Original">
     </div>
   </div>
 
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="{% static "hex/images/background2.jpg"%}" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-        </div>
+  <div class="panel top">
+    <div class="content">
+      <div class="description">
+        <h1 style="font-size: 32px;">Chariteasy - The impact that you can have on the future society.</h1>
+        <p>This is how the world could look like if you are willing to land a hand.</p>
       </div>
 
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/duotone-image.jpg" alt="Duotone">
     </div>
   </div>
+  <div class="handle"></div>
+</div>
+</style>
+<div class="main">
+<div class="container">
+<div class="row">
+<a class="btn-large grey darken-1 waves-effect waves-light col l5" href="#!" style="margin-top: 30px;">register now</a>
+<a class="btn-large grey darken-1 waves-effect waves-light col l5 push-l2" style="margin-top: 30px;" href="#!">login</a>
+                                                                                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                      </div>
 
+                                                                                                                                                                                                                                                                                                        <script>
+                                                                                                                                                                                                                                                                                                        document.addEventListener('DOMContentLoaded', function() {
+  var parent = document.querySelector('.splitview'),
+  topPanel = parent.querySelector('.top'),
+  handle = parent.querySelector('.handle'),
+  skewHack = 0,
+  delta = 0;
 
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="{% static "hex/images/background3.jpg"%}" alt="Unsplashed background img 3"></div>
-  </div>
+// If the parent has .skewed class, set the skewHack var.
+if (parent.className.indexOf('skewed') != -1) {
+  skewHack = 1000;
+}
 
-  <footer class="page-footer grey">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+parent.addEventListener('mousemove', function(event) {
+// Get the delta between the mouse position and center point.
+delta = (event.clientX - window.innerWidth / 2) * 0.5;
 
+// Move the handle.
+handle.style.left = event.clientX + delta + 'px';
 
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <div class="row">
-            <div class="social-icons">
-              <div class="col s2">
-                <a href="#"><i class="fa fa-lg fa-linkedin-square"></a></i>
-              </div>
-              <div class="col s2">
-                <a href="#"><i class="fa fa-lg fa-facebook-official"></a></i>
-              </div>
-              <div class="col s2">
-                <a href="#"><i class="fa fa-lg fa-twitter"></a></i>
-              </div>
-              <div class="col s2">
-                <a href="#"><i class="fa fa-lg fa-google-plus"></a></i>
-              </div>
-              <div class="col s2">
-                <a href="#"><i class="fa fa-lg fa-pinterest"></a></i>
-              </div>
-              <div class="col s2">
-                <a href="#"><i class="fa fa-lg fa-youtube"></a></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </footer>
-
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="{% static "hex/js/materialize.js" %}"></script>
-  <script src="{% static "hex/js/init.js" %}"></script>
-
-  </body>
-</html>
+// Adjust the top panel width.
+topPanel.style.width = event.clientX + skewHack + delta + 'px';
+});
+});
+</script>
+  </html>
