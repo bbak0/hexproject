@@ -21,18 +21,18 @@ class Benefactor(models.Model):
     phone_number = models.CharField(max_length=15)
 
 class Organizer(models.Model):
-	user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
-	bio = models.TextField(max_length = 500, blank = True)
-	location = models.CharField(max_length = 30, blank = True)
-	verified = models.BooleanField(default = False)
-    phone_number = models.CharField(max_length=15)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
+    bio = models.TextField(max_length = 500, blank = True)
+    location = models.CharField(max_length = 30, blank = True)
+    verified = models.BooleanField(default = False)
+    phone_number = models.CharField(max_length = 15)
 
 class Events(models.Model):
-	date = models.DateTimeField()
-	title = models.CharField(max_length = 50)
-	description = models.TextField()
-    city = modals.TextField()
-    adress = modals.TextField()
-    duration = modals.TextField()
+    date = models.DateTimeField()
+    title = models.CharField(max_length = 50)
+    description = models.TextField()
+    city = models.TextField()
+    adress = models.TextField()
+    duration = models.TextField()
     #Picture
-	organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
+    organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)

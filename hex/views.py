@@ -81,3 +81,5 @@ def create_event():
                             	description = models.TextField(),
                             	organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE),
                                 duration = dictionary.get("formDistance"))
+    else:
+        return render(request, 'hex/create-user.html',)
