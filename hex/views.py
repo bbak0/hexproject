@@ -103,11 +103,16 @@ def create_event(request):
     if request.method == 'POST':
         dictionary = request.POST
         print(dictionary)
-        User.objects.create_user(title=dictionary.get("formTitle"),
+        event = Events(title=dictionary.get("formTitle"),
                                 date = dictionary.get("eventDate"),
-                            	description = models.TextField(),
-                            	organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE),
-                                duration = dictionary.get("formDistance"))
+                            	description = dictionary.get("formDescription"),
+                                city = dictionary.get("myCity"),
+                                adress = dictionary.get("myAdress"),
+                                organizer = request.user,
+                                duration = dictionary.get("formDistance"),
+                                type = TYPEOFEVENTS.get(dictionary.get("formName")))
+        event.save()
+        return redirect(event_view, event_id=event.id )
     else:
         return render(request, 'hex/create-event.html',)
 
