@@ -20,7 +20,7 @@ def signup(request):
         #TODO INPUT VERIFICATION
         errors = {"username" : False, "email" : False, "passwordmatch" : False,
                 }
-        if User.objects.filter(username=dictionary.get("username")).exists():
+        if User.objects.filter(username=dictionary.get("username")).exists():i
             pass
 
 
