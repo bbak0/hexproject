@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'hex',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -67,6 +68,12 @@ TEMPLATES = [
         },
     },
 ]
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+TEMPLATE_DIRS =  (
+    BASE_DIR +  "/templates/",
+)
 
 WSGI_APPLICATION = 'hexproject.wsgi.application'
 
@@ -123,3 +130,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+LOGIN_REDIRECT_URL = '/'
+STATIC_DOC_ROOT = os.path.join(os.getcwd(), 'media')
