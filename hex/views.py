@@ -68,8 +68,16 @@ def getUserType(id):
     if Benefactor.objects.filter(user=id):
         return "Benefactor"
 
-<<<<<<< HEAD
+
 def getVolunteerEvents(request):
     pass
+
 def create_Event():
     if request.method == 'POST':
+        dictionary = request.POST
+        print(dictionary)
+        User.objects.create_user(title=dictionary.get("formTitle"),
+                                date = dictionary.get("eventDate"),
+                            	description = models.TextField(),
+                            	organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE),
+                                duration = dictionary.get("formDistance"))
