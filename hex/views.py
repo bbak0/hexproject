@@ -41,7 +41,7 @@ def signup(request):
         return render(request,'hex/signin.html',)
 
 def login_view(request):
-    render(request, 'hex/login.html', )
+    return render(request, 'hex/login.html', )
 
 
 
