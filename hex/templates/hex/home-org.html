@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% include 'hex/navigation.html'%}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,24 +33,8 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="{%static "hex/images/logo.png"%}" alt="logo" width="60px"> chariteasy</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="home.html"><span><img src="{%static "hex/images/dashboard.png"%}" alt="dashboard" width="25px"></span> Dashboard <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="settings/security.html"><span><img src="{%static "hex/images/settings.png"%}" alt="settings" width="25px"></span> Settings</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+  {%block navigation%}
+    {%endblock%}
 
 
 <style>
@@ -86,22 +71,22 @@
     <a class="navbar-brand"> <center>Last events organized by you </center></a>
 </div>
 
+{%for event in events%}
 <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin-left:10%;margin-bottom:2%; margin-top:5%; display:inline-block">
     <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">Title</h2>
+        <h2 class="mdl-card__title-text">{{event.title}}</h2>
     </div>
     <div class="mdl-card__supporting-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Mauris sagittis pellentesque lacus eleifend lacinia...
+        {{event.description}}
     </div>
     <div class="mdl-card__actions mdl-card--border">
         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Date :
+            Date :{{event.date}}
         </a>
     </div>
     <div class="mdl-card__actions mdl-card--border">
         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Place:
+            Place:{{event.adress}}
         </a>
     </div>
     <div class="mdl-card__actions mdl-card--border">
@@ -110,7 +95,7 @@
         </a>
     </div>
     <div class="mdl-card__actions mdl-card--border">
-        <button onclick="window.location.href='eventpage.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        <button onclick="window.location.href = '{% url 'event_view' event_id=event.id %}'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             Show more
         </button>
     </div>
@@ -120,7 +105,7 @@
         </button>
     </div>
 </div>
-
+{% endfor %}
 
 
 <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin-left:10%;margin-bottom:2%; margin-top: 10%; display:inline-block">

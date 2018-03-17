@@ -16,7 +16,7 @@ PREFERENCES = (('AE', 'Arts and Entertainment'),
                ('NP','Nonprofit'),
                ('SO','Society'),
                ('TC','Technology'))
-               
+
 class Volunteer(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
     bio = models.TextField(max_length = 500, blank = True)
@@ -48,3 +48,7 @@ class Events(models.Model):
     type = models.CharField(max_length=2)
     #Picture
     organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
+
+class EventRegistration(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
+    event = models.ForeignKey(Events, on_delete = models.CASCADE)

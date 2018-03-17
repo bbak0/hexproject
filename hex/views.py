@@ -2,22 +2,9 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
-from .models import Volunteer, Benefactor, Organizer, Events
+from .models import Volunteer, Benefactor, Organizer, Events, EventRegistration
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
-
-TYPEOFEVENTS = {'Arts and Entertainment' : 'AE',
-               'Business' : 'BZ',
-               'Biological and Physical Sciences' : 'BP',
-               'Education' : 'ED',
-               'Environment' : 'EV',
-               'Government' : 'GV',
-               'Health &amp; Medicine' : 'HM',
-               'International' : 'IT',
-               'Law and Public Policy' : 'LP',
-               'Nonprofit' : 'NP',
-               'Society' : 'SO',
-               'Technology' : 'TC'}
 
 # Create your views here.
 def signup(request):
@@ -70,6 +57,7 @@ def login_view(request):
     else:
         return render(request, 'hex/login.html', )
 
+@login_required
 def feed(request):
     userType = getUserType(request.user.id)
     if (userType == "Volunteer"):
@@ -82,7 +70,7 @@ def feed(request):
         print(choice_list)
         set_events = Events.objects.filter(type__in = choice_list)[:20]
     if (userType == "Organizer"):
-        set_events = None
+        set_events = Events.objects.filter(organizer_id = request.user.id)
     if (userType == "Benefactor"):
         set_events = None
     return render(request, 'hex/feed.html', {"userType": userType,
@@ -110,10 +98,7 @@ def getUserType(id):
         return "Benefactor"
 
 
-def getVolunteerEvents(request):
-    pass
-
-
+@login_required
 def create_event(request):
     if request.method == 'POST':
         dictionary = request.POST
@@ -130,3 +115,15 @@ def create_event(request):
         return redirect(event_view, event_id=event.id )
     else:
         return render(request, 'hex/create-event.html',)
+
+def event_register(request, event_id):
+    reg_event = Events.objects.get(pk=event_id)
+    new_registration = EventRegistration(user = request.user, event =  reg_event)
+    new_registration.save()
+
+def event_deregister(request, event_id):
+    pass
+
+@login_required
+def setup(request):
+    return render(request, 'hex/setup.html', )

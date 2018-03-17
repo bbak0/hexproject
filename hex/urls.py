@@ -10,5 +10,6 @@ urlpatterns = [
     path('event/<int:event_id>', views.event_view, name='event_view'),
     path('feed/', views.feed, name='feed'),
     path('create_event/', views.create_event, name='create_event'),
-    path('logout/', logout, {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout')
+    path('logout/', logout, {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
+    path('setup/', views.setup, name="setup"),
 ]
