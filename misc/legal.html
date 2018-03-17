@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daghub</title>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Animate.css -->
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Superfish -->
+	<link rel="stylesheet" href="/css/superfish.css">
+
+	<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/util.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+    <style>
+        body{counter-reset: section}
+        h2{counter-reset: sub-section}
+        h3{counter-reset: composite}
+        h4{counter-reset: detail}
+     
+        h2:before{
+          counter-increment: section;
+          content: counter(section) " ";
+        }
+        h3:before{
+          counter-increment: sub-section;
+          content: counter(section) "." counter(sub-section) " ";
+        }
+        h4:before{
+          counter-increment: composite;
+          content: counter(section) "." counter(sub-section) "." counter(composite) " ";
+        }
+        h5:before{
+          counter-increment: detail;
+          content: counter(section) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";
+        }
+        </style>
+
+</head>
+<body style="background: white;">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><img src="../images/logo.png" alt="logo" width="60px"> daghub</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../home.html"><span><img src="../images/dashboard.png" alt="dashboard" width="25px"></span> Dashboard <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../buy&sell"><span><img src="../images/exchange.png" alt="exchange" width="25px"></span> Buy & Sell</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../deposit"><span><img src="../images/deposit.png" alt="deposit" width="25px"></span> Deposit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../withdraw"><span><img src="../images/withdraw.png" alt="settings" width="25px"></span> Withdraw</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../settings"><span><img src="../images/settings.png" alt="settings" width="25px"></span> Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container" style="margin-top: 80px; margin-bottom: 120px;">
+        <h1 class="main-text-motto" style="margin: 0;">Legal</h1>
+        <hr>
+        <br>
+        <div class="container body-legal" style="margin: 50px 0; padding: 0;">
+            <h1>DAGHUB PRIVACY POLICY</h1>
+            <h2 style="font-size: 15px; font-weight: 400; color: #3e4552; line-height: 22px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore laborum, debitis maxime eaque animi tenetur! A assumenda repellat enim, aliquam fugiat quisquam possimus praesentium iste, deleniti vel ut veritatis. Consequuntur ducimus ratione voluptatibus dolorum cum, officiis ipsum vero quaerat nostrum dolor minus, deleniti iste perspiciatis tempora, saepe commodi? Sequi?
+            </h2>
+            <h2 style="font-size: 15px; font-weight: 400; color: #3e4552; line-height: 22px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore laborum, debitis maxime eaque animi tenetur! A assumenda repellat enim, aliquam fugiat quisquam possimus praesentium iste, deleniti vel ut veritatis. Consequuntur ducimus ratione voluptatibus dolorum cum, officiis ipsum vero quaerat nostrum dolor minus, deleniti iste perspiciatis tempora, saepe commodi? Sequi?
+            </h2>
+            <h3 style="font-size: 15px; font-weight: 400; color: #3e4552; line-height: 22px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore laborum, debitis maxime eaque animi tenetur! A assumenda repellat enim, aliquam fugiat quisquam possimus praesentium iste, deleniti vel ut veritatis. Consequuntur ducimus ratione voluptatibus dolorum cum, officiis ipsum vero quaerat nostrum dolor minus, deleniti iste perspiciatis tempora, saepe commodi? Sequi?
+            </h3>
+            <h3 style="font-size: 15px; font-weight: 400; color: #3e4552; line-height: 22px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore laborum, debitis maxime eaque animi tenetur! A assumenda repellat enim, aliquam fugiat quisquam possimus praesentium iste, deleniti vel ut veritatis. Consequuntur ducimus ratione voluptatibus dolorum cum, officiis ipsum vero quaerat nostrum dolor minus, deleniti iste perspiciatis tempora, saepe commodi? Sequi?
+            </h3>
+            <h2 style="font-size: 15px; font-weight: 400; color: #3e4552; line-height: 22px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore laborum, debitis maxime eaque animi tenetur! A assumenda repellat enim, aliquam fugiat quisquam possimus praesentium iste, deleniti vel ut veritatis. Consequuntur ducimus ratione voluptatibus dolorum cum, officiis ipsum vero quaerat nostrum dolor minus, deleniti iste perspiciatis tempora, saepe commodi? Sequi?
+            </h2>
+            <p>
+                    <i>Last updated: May 27, 2016</i>
+            </p>
+        </div>
+        <div class="container body-legal" style="margin: 100px 0; padding: 0;">
+            <h1>DAGHUB PRIVACY POLICY</h1>
+            <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Et consequatur deserunt sequi cum ea earum! Laudantium asperiores quis laboriosam nesciunt molestiae commodi repudiandae, natus maxime. Consectetur modi pariatur consequuntur neque voluptates suscipit, deserunt optio consequatur vitae sapiente? Esse sequi facere nam culpa voluptates doloremque sit, reprehenderit consectetur illo obcaecati, nesciunt aliquam. Ullam minima, fuga placeat iste quia quas ea ab saepe repellendus, ipsam maiores modi beatae! Dolor nam veritatis iusto nobis, ex beatae maiores, voluptates impedit deleniti, quaerat laboriosam. Laboriosam, cum possimus sed quasi consectetur officia porro perferendis cupiditate voluptatum, magnam suscipit doloremque. Provident doloremque ducimus cumque suscipit delectus eaque. Dolorem, exercitationem laborum nihil rerum corporis quisquam suscipit eaque sed consectetur dicta quibusdam natus. Sit inventore a facilis consequuntur? Id?
+            </p>
+            <p>
+                    <i>Last updated: May 27, 2016</i>
+            </p>
+        </div>
+        <div class="container body-legal" style="margin: 100px 0; padding: 0;">
+                <h1>DAGHUB PRIVACY POLICY</h1>
+                <p>
+                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit perferendis deleniti sed natus nostrum modi, quod doloribus quisquam, iusto blanditiis suscipit, temporibus beatae eaque tempora maiores. Iure recusandae natus sint harum molestias autem corporis eligendi quas eum nihil deleniti tempore aperiam, illo ex pariatur minus repellat quam, ipsa saepe, eos et quae dignissimos nisi. Omnis expedita alias exercitationem qui sed distinctio deleniti, iusto inventore dolore cupiditate beatae, optio dignissimos iure voluptates modi eos nesciunt architecto hic. Accusamus sapiente voluptates voluptatem, mollitia ea debitis facilis molestias sunt fugiat qui esse, id provident blanditiis, in maiores modi autem assumenda ad iste. Veniam aliquam doloribus eveniet eius in culpa nesciunt, adipisci labore autem officia reiciendis quas vitae reprehenderit. Maiores eaque enim ut ab hic debitis quo fuga aspernatur. Ipsum aliquid blanditiis maxime labore voluptatem. Maxime iusto atque velit beatae blanditiis adipisci sed sunt ut minima molestias soluta quibusdam odit ex provident dolores, sapiente odio obcaecati veniam dignissimos. Natus porro, possimus dolores dolore eos quod! Natus in quis doloribus aperiam eius nobis amet autem corrupti quas maiores, ad delectus? Nostrum, quos accusantium alias expedita, neque facilis excepturi enim veniam corporis rerum atque! Hic maiores quis voluptatum culpa vitae! Tempore quasi aperiam tempora molestiae id?
+                </p>
+                <p>
+                        <i>Last updated: May 27, 2016</i>
+                </p>
+            </div>
+            <div class="container body-legal" style="margin: 100px 0; padding: 0;">
+                    <h1>DAGHUB PRIVACY POLICY</h1>
+                    <p>
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita corporis aperiam voluptate deleniti ea possimus deserunt laborum dicta distinctio accusantium accusamus repellendus totam recusandae fugiat, dolorem laudantium obcaecati quasi temporibus! Mollitia doloribus in nemo? In labore alias ipsum aspernatur voluptatem odio assumenda laborum, minus vel molestias quos, dignissimos iste magnam rem dolore quibusdam ratione fugit at, laudantium totam nobis earum soluta illo! Tempora quisquam natus sed saepe. Officia mollitia pariatur cumque fuga iusto nemo deleniti itaque minima, quo porro autem? Rem illum dicta nam aperiam corrupti natus aliquam obcaecati, nisi minima consectetur similique, repellat libero dolores a in, ratione aspernatur enim saepe laudantium quas aliquid culpa itaque iure? Ea tempore voluptatibus consequuntur dolor, nesciunt aliquam totam eveniet ipsum quibusdam consequatur eum perspiciatis recusandae asperiores perferendis enim harum voluptate ipsa fugiat nulla laborum eligendi. Beatae cupiditate optio quod praesentium reprehenderit hic modi possimus saepe. Libero dolorum omnis quisquam architecto dolorem velit at pariatur nulla voluptatibus reprehenderit in beatae deleniti assumenda animi qui consectetur voluptates maxime explicabo, tempore, temporibus doloribus. Nihil quidem necessitatibus quis architecto unde? Illo consequuntur nulla voluptatibus dolor eum iste possimus optio odit fugit dolorem ad architecto suscipit natus amet odio, facere sed aliquid iusto officiis voluptate accusamus! Officia sunt quasi adipisci voluptate assumenda, unde aliquam illo quaerat. Quidem incidunt iure beatae ea ratione asperiores accusantium, voluptas dolorem, repellat ex numquam debitis quo aspernatur nesciunt rem cum voluptatum perferendis nemo! Inventore repudiandae possimus quasi voluptatem? Error accusantium suscipit sed rerum animi, omnis, excepturi autem tempora perspiciatis quod inventore? Quas ex consequatur similique doloremque eum repellat autem veniam dignissimos totam! Cupiditate repellendus odio, pariatur laborum hic dignissimos illo suscipit odit! Laborum necessitatibus perferendis totam quaerat. Sapiente quos sed placeat nemo impedit, distinctio labore alias magni assumenda laborum quam modi eligendi velit delectus ducimus tenetur ratione odit porro id, pariatur doloribus. Odit dignissimos quibusdam saepe repudiandae, suscipit officiis alias soluta reiciendis placeat. Ipsum nulla tempore neque excepturi reprehenderit autem tempora, dicta nesciunt nobis voluptates, natus labore porro sunt! Voluptatum dicta hic voluptates veritatis aliquam corporis eius quaerat ipsum animi minima, adipisci aut ullam placeat aspernatur voluptate porro sunt accusantium doloremque obcaecati delectus incidunt esse quidem! Ducimus delectus error ab, perspiciatis ullam sint quibusdam aperiam eligendi? Magni sequi nisi labore beatae quis fuga, nesciunt, quaerat saepe fugit asperiores laudantium, molestias eligendi tempore eveniet provident modi fugiat? Corrupti facilis, quos aspernatur eveniet vero voluptatibus nam aliquid ipsam odit incidunt nostrum totam praesentium illo.
+                    </p>
+                    <p>
+                            <i>Last updated: May 27, 2016</i>
+                    </p>
+                </div>
+    </div>
+
+
+
+    <script src="/scripts/jquery.min.js"></script>
+    <script src="/scripts/jquery.easing.1.3.js"></script>
+
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    
+	<script src="/scripts/jquery.waypoints.min.js"></script>
+	<script src="/scripts/jquery.stellar.min.js"></script>
+	<script src="/scripts/hoverIntent.js"></script>
+    <script src="/scripts/superfish.js"></script>
+    
+    <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- Main JS (Do not remove) -->
+    <script src="js/main.js"></script>
+    <script src="/scripts/script.js"></script>
+    
+    <script src="js/jquery.mask.min.js"></script>
+</body>
+</html>
