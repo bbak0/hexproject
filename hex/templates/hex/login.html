@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {%load static%}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>VoluntEasy | Log In</title>
     <img src="images/handshake.jpeg" id="bg" alt="">
-	<link rel="icon" type="image/png" href="log-in/images/icons/favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="log-in/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="log-in/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="log-in/vendor/animate/animate.css">
-    <link rel="stylesheet" type="text/css" href="log-in/vendor/css-hamburgers/hamburgers.min.css">
-    <link rel="stylesheet" type="text/css" href="log-in/vendor/select2/select2.min.css">
-    <link rel="stylesheet" type="text/css" href="log-in/css/util.css">
-    <link rel="stylesheet" type="text/css" href="log-in/css/main.css">
+	<link rel="icon" type="image/png" href="{% static "hex/log-in/images/icons/favicon.ico" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "hex/log-in/vendor/bootstrap/css/bootstrap.min.css"%}">
+    <link rel="stylesheet" type="text/css" href="{% static "hex/log-in/fonts/font-awesome-4.7.0/css/font-awesome.min.css"%}">
+    <link rel="stylesheet" type="text/css" href="{% static "hex/log-in/vendor/animate/animate.css"%}">
+    <link rel="stylesheet" type="text/css" href="{% static "hex/log-in/vendor/css-hamburgers/hamburgers.min.css"%}">
+    <link rel="stylesheet" type="text/css" href="{% static "hex/log-in/vendor/select2/select2.min.css"%}">
+    <link rel="stylesheet" type="text/css" href="{% static "hex/log-in/css/util.css"%}">
+    <link rel="stylesheet" type="text/css" href="{% static "hex/log-in/css/main.css"%}">
 
 </head>
 
@@ -32,11 +33,11 @@
 
 </style>
 <body>
-    
+
 
     <div class="limiter">
         <div class="container-login100">
-            
+
             <div class="wrap-login100" id="log-form">
                 <div class="alert alert-danger txt2 log-alert text-center alert-dismissible fade show" role="alert">
                     Invalid email or password. Try clicking 'Forgot Password' if you're having trouble signing in.
@@ -49,7 +50,7 @@
                 </div> -->
 
                 <form class="login100-form validate-form log-state">
-                    <span class="login100-form-title">      
+                    <span class="login100-form-title">
                         Login
                     </span>
 
@@ -75,7 +76,7 @@
                         <input type="checkbox" class="form-check-input" style="margin-left: 0px; margin-top: 5px;">
                         <label class="form-check-label txt1">Keep me signed in</label>
                     </div>
-                    
+
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn" id="login-btn">
                             Login
@@ -111,7 +112,7 @@
                         <a class="txt2" id="sign">
                             Sign Up</a>
                         |
-                        <a class="txt2" href="index.html">
+                        <a class="txt2" href="{% url 'index' %}">
                             Back
                         </a>
                     </div>
@@ -120,7 +121,7 @@
 
 
 
-            
+
             <div class="wrap-login100 sign-up" id="sign-form">
                 <!-- <div class="login100-pic">
                     <img src="log-in/images/img-01.png" alt="IMG">
@@ -154,7 +155,7 @@
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </span>
                     </div> -->
-                    
+
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn" id="signup-btn">
                             Continue
@@ -181,14 +182,14 @@
                         <a class="txt2" id="log">
                             Log In</a>
                         |
-                        <a class="txt2" href="index.html">
+                        <a class="txt2" href="{%url 'index'%}">
                             Back
                         </a>
                     </div>
-                    
+
                 </form>
             </div>
-        
+
             <div class="wrap-login100 sign-up-2" id="sign-form-2">
                 <!-- <div class="login100-pic">
                     <img src="log-in/images/img-01.png" alt="IMG">
@@ -206,7 +207,7 @@
                             <i class="fa fa-mobile" aria-hidden="true" style="font-size: 25px;"></i>
                         </span>
                     </div>
-<!-- 
+<!--
                     <div class="wrap-input100 validate-input" data-validate = "Number is wrong">
                         <input class="input100" type="text" name="telefon" placeholder="Phone">
                         <span class="focus-input100"></span>
@@ -222,7 +223,7 @@
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </span>
                     </div> -->
-                    
+
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn" id="signup-btn2">
                             Verify
@@ -249,11 +250,11 @@
                         <a class="txt2" id="log">
                             Log In</a>
                         |
-                        <a class="txt2" href="index.html">
+                        <a class="txt2" href="{% url 'index' %}">
                             Back
                         </a>
                     </div>
-                    
+
                 </form>
             </div>
 
@@ -309,7 +310,7 @@
                             <i class="fa fa-globe" aria-hidden="true"></i>
                         </span>
                     </div>
-<!-- 
+<!--
                     <div class="wrap-input100 validate-input" data-validate = "Number is wrong">
                         <input class="input100" type="text" name="telefon" placeholder="Phone">
                         <span class="focus-input100"></span>
@@ -325,7 +326,7 @@
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </span>
                     </div> -->
-                    
+
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn" id="signup-btn3">
                             Sign-up
@@ -352,21 +353,21 @@
                         <a class="txt2" id="log">
                             Log In</a>
                         |
-                        <a class="txt2" href="index.html">
+                        <a class="txt2" href="{% url 'index' %}">
                             Back
                         </a>
                     </div>
-                    
+
                 </form>
             </div>
 
             <div class="wrap-login100 two-fact" id="two-facts" style="padding-top: 100px;">
                     <form class="login100-form validate-form">
-                        <span class="login100-form-title" style="margin-top: -50px; margin-bottom: -50px;">      
+                        <span class="login100-form-title" style="margin-top: -50px; margin-bottom: -50px;">
                             2-Step Verification
                             <p class="txt1" style="padding: 20px 5px; margin-bottom: 0;">Enter the verification code generated by your phone ending in +xx xx xxx xx06.</p>
                         </span>
-    
+
                         <div class="wrap-input100" data-validate = "Valid email is required: ex@abc.xyz">
                             <input class="input100" type="text" name="code" placeholder="Code">
                             <span class="focus-input100"></span>
@@ -374,7 +375,7 @@
                                 <i class="fa fa-mobile" aria-hidden="true" style="font-size: 25px;"></i>
                             </span>
                         </div>
-                        
+
                         <div class="wrap-input100" style="margin-top: 15px; margin-bottom: 0px;">
                             <input type="checkbox" class="form-check-input" style="margin-left: 0px; margin-top: 5px;">
                             <label class="form-check-label txt1" style="margin-top: 3px;">Don't ask me for the code again for 30 days when I use this computer.</label>
@@ -387,7 +388,7 @@
                                 </div>
                             </a>
                         </div>
-    
+
                         <div class="text-center p-t-60 txt2">
                             <p class="txt1">Don't receive the code?</p>
                             <a class="txt2" id="sign">
@@ -411,23 +412,23 @@
                             <path d="M420,32H212c-30.878,0-56,25.122-56,56v120c0,28.163,20.897,51.537,48,55.43v29.256c0,6.495,3.877,12.297,9.877,14.782   c1.992,0.825,4.075,1.226,6.14,1.226c4.155,0,8.229-1.626,11.297-4.694l40-40H420c30.878,0,56-25.122,56-56V88   C476,57.122,450.878,32,420,32z M460,208c0,22.056-17.944,40-40,40H268c-2.122,0-4.157,0.843-5.657,2.343L220,292.68V256   c0-4.418-3.582-8-8-8c-22.056,0-40-17.944-40-40V88c0-22.056,17.944-40,40-40h208c22.056,0,40,17.944,40,40V208z" data-original="#000000" class="active-path" data-old_color="#004c68" fill="#004c68"/>
                         </g></g> </svg>
                     </div>
-    
-                    
+
+
                 </div>
 
         </div>
 
-        
+
     </div>
 
 
 
-    <script src="log-in/vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="log-in/vendor/bootstrap/js/popper.js"></script>
-	<script src="log-in/vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="log-in/vendor/select2/select2.min.js"></script>
-    <script src="log-in/js/main.js"></script>
-    
+    <script src="{% static "hex/log-in/vendor/jquery/jquery-3.2.1.min.js"%}"></script>
+	<script src="{% static "hex/log-in/vendor/bootstrap/js/popper.js"%}"></script>
+	<script src="{% static "hex/log-in/vendor/bootstrap/js/bootstrap.min.js"%}"></script>
+	<script src="{% static "hex/log-in/vendor/select2/select2.min.js"%}"></script>
+    <script src="{% static "hex/log-in/js/main.js"%}"></script>
+
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </body>
 </html>

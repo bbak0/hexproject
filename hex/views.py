@@ -20,9 +20,10 @@ def signup(request):
         #TODO INPUT VERIFICATION
         errors = {"username" : False, "email" : False, "passwordmatch" : False,
                 }
-        if User.objects.filter(username=dictionary.get("username")).exists(){
+        if User.objects.filter(username=dictionary.get("username")).exists():
+            pass
 
-        }
+
         User.objects.create_user(username=dictionary.get("username"),
                                 email=dictionary.get("email"),
                                 password=dictionary.get("password"))
@@ -39,9 +40,8 @@ def signup(request):
     else:
         return render(request,'hex/signin.html',)
 
-def custom_login(request):
-    user = authenticate(username=dictionary.get("username"),
-                        password=dictionary.get("password"))
+def login_view(request):
+    return render(request, 'hex/login.html', )
 
 
 
