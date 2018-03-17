@@ -34,5 +34,6 @@ class Events(models.Model):
     city = models.TextField()
     adress = models.TextField()
     duration = models.TextField()
+    type = models.CharField(max_length=2)
     #Picture
     organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)

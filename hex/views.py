@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate
-from .models import Volunteer, Benefactor, Organizer
+from .models import Volunteer, Benefactor, Organizer, Events
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 
@@ -48,7 +48,19 @@ def login_view(request):
 
 def feed(request):
     userType = getUserType(request.user.id)
-    return render(request, 'hex/feed.html', {"user_type": userType})
+    if (userType == "Volunteer"):
+        vol = Volunteer.objects.get(user = request.user.id)
+        city = vol.location
+        choices = vol.preferences
+        choices = "AA, BB, DD"
+        print(choices)
+        choice_list = choices.split(", ")
+        print(choice_list)
+        set_events = Events.objects.filter(type__in = choice_list)[:20]
+    if (userType == "Organizer"):
+        set_events = None
+    return render(request, 'hex/feed.html', {"userType": userType,
+                                                "events": set_events,})
 
 
 def index(request):
@@ -59,6 +71,7 @@ def event_view(request, event_id):
     event = Events.objects.get(pk=event_id)
     if not event:
         raise Http404
+    return render(request, 'hex/eventpage.html', {"event":event})
 
 def getUserType(id):
     if Volunteer.objects.filter(user=id):
@@ -72,7 +85,7 @@ def getUserType(id):
 def getVolunteerEvents(request):
     pass
 
-def create_event():
+def create_event(request):
     if request.method == 'POST':
         dictionary = request.POST
         print(dictionary)
@@ -82,4 +95,4 @@ def create_event():
                             	organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE),
                                 duration = dictionary.get("formDistance"))
     else:
-        return render(request, 'hex/create-user.html',)
+        return render(request, 'hex/create-event.html',)
