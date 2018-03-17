@@ -1,11 +1,15 @@
 {% load static %}
-{%if userType == Volunteer%}
+{%if userType == "Volunteer"%}
   {% include 'hex/home-vol.html' %}
+  dupex
 {%endif%}
 
-{%if userType == Organizer%}
+{%if userType == "Organizer"%}
   {% include 'hex/home-org.html' %}
+  dupex2
 {%endif%}
+
+{{userType}}
 
 {%if userType == Benefactor%}
 {%endif%}
