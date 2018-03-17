@@ -57,6 +57,7 @@ def login_view(request):
     else:
         return render(request, 'hex/login.html', )
 
+@login_required
 def feed(request):
     userType = getUserType(request.user.id)
     if (userType == "Volunteer"):
@@ -97,9 +98,7 @@ def getUserType(id):
         return "Benefactor"
 
 
-def getVolunteerEvents(request):
-    pass
-
+@login_required
 def create_event(request):
     if request.method == 'POST':
         dictionary = request.POST
@@ -118,5 +117,6 @@ def event_register(request, event_id):
 def event_deregister(request, event_id):
     pass
 
+@login_required
 def setup(request):
     return render(request, 'hex/setup.html', )
