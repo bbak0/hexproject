@@ -8,6 +8,8 @@ from django.http import Http404
 
 # Create your views here.
 def signup(request):
+    if request.user.is_authenticated:
+        return redirect('feed')
     #print(request.POST)
     if request.method == 'POST':
         dictionary = request.POST
@@ -44,7 +46,16 @@ def signup(request):
         return render(request,'hex/signin.html',)
 
 def login_view(request):
-    return render(request, 'hex/login.html', )
+    if request.user.is_authenticated:
+        return redirect('feed')
+    if request.method == 'POST':
+        dictionary = request.POST
+        user = authenticate(username=dictionary.get("username"),
+                            password=dictionary.get("password"))
+        login(request,user)
+        return redirect('feed')
+    else:
+        return render(request, 'hex/login.html', )
 
 def feed(request):
     userType = getUserType(request.user.id)
@@ -64,6 +75,8 @@ def feed(request):
 
 
 def index(request):
+    if request.user.is_authenticated:
+        return redirect('feed')
     return render(request, 'hex/index.html', )
 
 
