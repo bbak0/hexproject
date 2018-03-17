@@ -26,6 +26,12 @@ class Benefactor(models.Model):
     location = models.CharField(max_length=30, blank=True)
 	#telephone
 
+class Organizer(models.Model):
+	user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+	bio = models.TextField(max_length=500, blank=True)
+	location = models.CharField(max_length=30, blank=True)
+	verified = models.BooleanField(default=False)
+
 class Events(models.Model):
 	date = models.DateTimeField()
 	#x_coordinate = models.DoubleField(null=True) - wrong type
