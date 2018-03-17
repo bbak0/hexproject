@@ -1,0 +1,11 @@
+{% load static %}
+{%if userType == Volunteer%}
+  {% include 'hex/home-vol.html' %}
+{%endif%}
+
+{%if userType == Organizer%}
+  {% include 'hex/home-org.html' %}
+{%endif%}
+
+{%if userType == Benefactor%}
+{%endif%}
