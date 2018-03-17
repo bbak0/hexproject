@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Preferences</title>
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/daterangepicker.css" />
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+
+
+<div class="container">
+    <h1 class="centered">Create a new event!</h1>
+    <p class="centered lead">Complete the form below and let everybody know about it. Potential volunteers and benefactors may be closer than you think! </p> <hr>
+
+</div><!--container-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-md-offset-3">
+            <form method="post" action="">
+                <div class="form-group">
+                    <label for="formTitle">Event name</label>
+                    <input id="formTitle" name="formTitle" class="form-control" style="text" required/>
+                </div>
+                <div class="form-group">
+                    <label for="formName">Select an event area</label>
+                    <select class="form-control" id="forName" name="forName">
+                        <option>Architecture, Planning &amp; Environmental Design</option>
+                        <option>Arts &amp; Entertainment</option>
+                        <option>Business</option>
+                        <option>Biological &amp; Physical Sciences</option>
+                        <option>Communications</option>
+                        <option>Education</option>
+                        <option>Engineering &amp; Computer Science</option>
+                        <option>Environment</option>
+                        <option>Government</option>
+                        <option>Health &amp; Medicine</option>
+                        <option>International</option>
+                        <option>Law &amp; Public Policy</option>
+                        <option>Nonprofit</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">Type in your event location</label>
+                    <input style="text" id="address" name="address" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="formDistance">Type in the duration of the event </label>
+                    <select class="form-control" name="formDistance" id="formDistance">
+                        <option>1 day</option>
+                        <option>2 days</option>
+                        <option>3 days</option>
+                        <option>>3 days</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Description of the event</label>
+                    <textarea rows="4" class="form-control" id="formDescription" name="formDescription"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Upload a picture for the event!</label>
+                    <input type="file" name="pic" accept="image/*">
+                </div>
+
+
+                <button type="submit" id="submit" name="submit" class="btn btn-danger btn-lg center-block">Create event</button>
+            </form>
+
+        </div><!--col-md-5-->
+
+    </div><!--row-->
+
+</div><!--container-->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="moment.min.js"></script>
+<script type="text/javascript" src="daterangepicker.js"></script>
+<script>
+    $('input[name="daterange"]').daterangepicker();
+</script>
+</body>
+</html>
