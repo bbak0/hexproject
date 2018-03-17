@@ -121,9 +121,10 @@ def create_event(request):
                             	description = dictionary.get("formDescription"),
                                 city = dictionary.get("myCity"),
                                 adress = dictionary.get("myAdress"),
-                            	organizer = request.user.id ,
+                                organizer = request.user,
                                 duration = dictionary.get("formDistance"),
                                 type = TYPEOFEVENTS.get(dictionary.get("formName")))
-        return redirect(request, {% url 'event_view' event_id=event.id %})
+        event.save()
+        return redirect(event_view, event_id=event.id )
     else:
         return render(request, 'hex/create-event.html',)
