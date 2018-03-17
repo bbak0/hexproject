@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -70,7 +71,7 @@
         <h2 class="mdl-card__title-text">Title</h2>
     </div>
     <div class="mdl-card__actions mdl-card--border">
-        <button onclick="window.location.href='eventpage.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        <button onclick="window.location.href = {% url 'create_event' %}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
           Create new event
         </button>
     </div>

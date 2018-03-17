@@ -48,7 +48,8 @@ def login_view(request):
 
 def feed(request):
     userType = getUserType(request.user.id)
-    print(userType)
+    if userType == "Volunteer":
+        events = getVolunteerEvents(request)
     return render(request, 'hex/feed.html', {"userType": userType})
 
 
@@ -60,6 +61,7 @@ def event_view(request, event_id):
     event = Events.objects.get(pk=event_id)
     if not event:
         raise Http404
+    return render(request, 'hex/eventpage.html', {"event" : event})
 
 def getUserType(id):
     if Volunteer.objects.filter(user=id):
@@ -68,3 +70,10 @@ def getUserType(id):
         return "Organizer"
     if Benefactor.objects.filter(user=id):
         return "Benefactor"
+
+def getVolunteerEvents(request):
+    pass
+
+def create_event(request):
+
+    return render(request, 'hex/create-event.html', )
