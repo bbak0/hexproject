@@ -6,8 +6,23 @@ from .models import Volunteer, Benefactor, Organizer, Events
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 
+TYPEOFEVENTS = {'Arts and Entertainment' : 'AE',
+               'Business' : 'BZ',
+               'Biological and Physical Sciences' : 'BP',
+               'Education' : 'ED',
+               'Environment' : 'EV',
+               'Government' : 'GV',
+               'Health &amp; Medicine' : 'HM',
+               'International' : 'IT',
+               'Law and Public Policy' : 'LP',
+               'Nonprofit' : 'NP',
+               'Society' : 'SO',
+               'Technology' : 'TC'}
+
 # Create your views here.
 def signup(request):
+    if request.user.is_authenticated:
+        return redirect('feed')
     #print(request.POST)
     if request.method == 'POST':
         dictionary = request.POST
@@ -44,7 +59,16 @@ def signup(request):
         return render(request,'hex/signin.html',)
 
 def login_view(request):
-    return render(request, 'hex/login.html', )
+    if request.user.is_authenticated:
+        return redirect('feed')
+    if request.method == 'POST':
+        dictionary = request.POST
+        user = authenticate(username=dictionary.get("username"),
+                            password=dictionary.get("password"))
+        login(request,user)
+        return redirect('feed')
+    else:
+        return render(request, 'hex/login.html', )
 
 def feed(request):
     userType = getUserType(request.user.id)
@@ -59,11 +83,15 @@ def feed(request):
         set_events = Events.objects.filter(type__in = choice_list)[:20]
     if (userType == "Organizer"):
         set_events = None
+    if (userType == "Benefactor"):
+        set_events = None
     return render(request, 'hex/feed.html', {"userType": userType,
                                                 "events": set_events,})
 
 
 def index(request):
+    if request.user.is_authenticated:
+        return redirect('feed')
     return render(request, 'hex/index.html', )
 
 
@@ -85,14 +113,20 @@ def getUserType(id):
 def getVolunteerEvents(request):
     pass
 
+
 def create_event(request):
     if request.method == 'POST':
         dictionary = request.POST
         print(dictionary)
-        User.objects.create_user(title=dictionary.get("formTitle"),
+        event = Events(title=dictionary.get("formTitle"),
                                 date = dictionary.get("eventDate"),
-                            	description = models.TextField(),
-                            	organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE),
-                                duration = dictionary.get("formDistance"))
+                            	description = dictionary.get("formDescription"),
+                                city = dictionary.get("myCity"),
+                                adress = dictionary.get("myAdress"),
+                                organizer = request.user,
+                                duration = dictionary.get("formDistance"),
+                                type = TYPEOFEVENTS.get(dictionary.get("formName")))
+        event.save()
+        return redirect(event_view, event_id=event.id )
     else:
         return render(request, 'hex/create-event.html',)

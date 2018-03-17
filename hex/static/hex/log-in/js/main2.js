@@ -2,7 +2,7 @@
 (function ($) {
     "use strict";
 
-    
+
     /*==================================================================
     [ Validate ]*/
     var input = $('.validate-input .input100');
@@ -51,12 +51,12 @@
 
         $(thisAlert).removeClass('alert-validate');
     }
-    
-    
+
+
 
 })(jQuery);
 
-$("#sign").click(function() {
+/*$("#sign").click(function() {
     var a = document.getElementById("sign-form");
     a.style.left = 'auto';
 
@@ -83,7 +83,7 @@ $("#login-btn").click(function() {
 $("#signup-btn").click(function() {
     var a = document.getElementById("sign-form");
     a.style.display = 'none';
-    
+
     var c = document.getElementById("sign-form-2");
     c.style.display = 'block';
 });
@@ -103,3 +103,4 @@ $("#signup-btn3").click(function() {
     var c = document.getElementsByClassName("two-fact");
     c[0].style.display = 'block';
 });
+*/
