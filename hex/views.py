@@ -72,7 +72,7 @@ def getUserType(id):
 def getVolunteerEvents(request):
     pass
 
-def create_Event():
+def create_event():
     if request.method == 'POST':
         dictionary = request.POST
         print(dictionary)
