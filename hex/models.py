@@ -29,3 +29,11 @@ class Benefactor(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.TextField(max_length=500, blank=True)
     location = models.CharField(max_length=30, blank=True)
+class Events(models.Model):
+	date = models.DateTimeField()
+	x_coordinate = models.DoubleField(null=True)
+	y_coordinate = models.DoubleField(null=True)
+	title = models.CharField(max_length = 50)
+	description = models.TextField()
+	organizer = models.ForeignKey(settings.AUTH_USER_MODEL)
+>>>>>>> f0ff55f97403091f626e2e48a170863177f58d2a
