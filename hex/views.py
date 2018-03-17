@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
+from django.contrib.auth import login, authenticate
 
 # Create your views here.
 def signup(request):
@@ -25,6 +26,7 @@ def signup(request):
             Volunteer.objects.get_or_create(user = user)
         elif(dictionary.get(usertype) == "Organizer"):
             Organizer.objects.get_or_create(user = user)
+
     else:
         return render(request,'hex/signin.html',)
 
@@ -35,7 +37,7 @@ def custom_login(request):
 
 
 def index(request):
-    return HttpResponse("dupex hehe")
+    return render(request, 'hex/index.html', )
 
 
 def getEventList(request):
