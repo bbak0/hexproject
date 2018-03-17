@@ -4,8 +4,19 @@ from django.dispatch import receiver
 from django.conf import settings
 from multiselectfield import MultiSelectField
 
-PREFERENCES = (('KB', 'Children'), ('EL', 'Elderly'), ('HO', 'Homeless'), ('TE', 'Tech'), ('MU', 'Music'), ('EV', 'Environmental'), ('ED', 'Educational'))
-
+PREFERENCES = (('AE', 'Arts and Entertainment'),
+               ('BZ','Business'),
+               ('BP','Biological and Physical Sciences'),
+               ('ED','Education'),
+               ('EV','Environment'),
+               ('GV','Government'),
+               ('HM','Health &amp; Medicine'),
+               ('IT','International'),
+               ('LP','Law and Public Policy'),
+               ('NP','Nonprofit'),
+               ('SO','Society'),
+               ('TC','Technology'))
+               
 class Volunteer(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
     bio = models.TextField(max_length = 500, blank = True)
