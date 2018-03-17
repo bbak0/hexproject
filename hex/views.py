@@ -20,9 +20,10 @@ def signup(request):
         #TODO INPUT VERIFICATION
         errors = {"username" : False, "email" : False, "passwordmatch" : False,
                 }
-        if User.objects.filter(username=dictionary.get("username")).exists(){
+        if User.objects.filter(username=dictionary.get("username")).exists():
+            pass
 
-        }
+
         User.objects.create_user(username=dictionary.get("username"),
                                 email=dictionary.get("email"),
                                 password=dictionary.get("password"))
