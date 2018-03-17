@@ -22,7 +22,7 @@ def signup(request):
         #TODO INPUT VERIFICATION
         errors = {"username" : False, "email" : False, "passwordmatch" : False,
                 }
-        if User.objects.filter(username=dictionary.get("username")).exists():i
+        if User.objects.filter(username=dictionary.get("username")).exists():
             pass
 
 
@@ -48,7 +48,8 @@ def login_view(request):
 
 def feed(request):
     userType = getUserType(request.user.id)
-    return render(request, 'hex/feed.html', {"user_type": userType})
+    print(userType)
+    return render(request, 'hex/feed.html', {"userType": userType})
 
 
 def index(request):
