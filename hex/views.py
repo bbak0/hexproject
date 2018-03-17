@@ -83,6 +83,8 @@ def feed(request):
         set_events = Events.objects.filter(type__in = choice_list)[:20]
     if (userType == "Organizer"):
         set_events = None
+    if (userType == "Benefactor"):
+        set_events = None
     return render(request, 'hex/feed.html', {"userType": userType,
                                                 "events": set_events,})
 
