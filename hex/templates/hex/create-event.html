@@ -33,16 +33,16 @@
 <div class="container">
     <div class="row">
         <div class="col-md-5 col-md-offset-3">
-            <form method="post" action="{% url 'create_Event' %}">
+            <form method="post" action="{% url 'create_event' %}">
                 <div class="form-group">
                     <label for="formTitle">Event name</label>
                     <input id="formTitle" name="formTitle" class="form-control" style="text" required/>
                 </div>
+                {% csrf_token %}
                 <div class="form-group">
                     <label for="eventDate">Event date</label>
                     <input type="date" name="eventDate" class="form-control" style="text" required/>
                 </div>
-                <input >
                 <div class="form-group">
                     <label for="formName">Select an event area</label>
                     <select class="form-control" id="forName" name="forName">

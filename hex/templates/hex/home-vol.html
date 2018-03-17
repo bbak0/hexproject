@@ -70,7 +70,12 @@
             color: #fff;
         }
     </style>
-
+    {% if not events %}
+    <div>
+      <h1>You don't have any event recommendation. Fill your preferences and city in the settings page to see recommendations.</h1>
+    </div>
+    {% endif %}
+    {%for event in events%}
     <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin-left:10%;margin-bottom:2%; margin-top: 10%; display:inline-block">
         <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">Title</h2>
@@ -95,7 +100,7 @@
             </a>
         </div>
         <div class="mdl-card__actions mdl-card--border">
-            <button onclick="window.location.href='eventpage.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+            <button onclick="window.location.href = '{% url 'event_view' event_id=event.id %}'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
                 Show more
             </button>
         </div>
@@ -105,111 +110,11 @@
             </button>
         </div>
     </div>
+    {% endfor %}
 
-    <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin-left:10%;margin-bottom:2%; margin-top: 10%; display:inline-block">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">Title</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris sagittis pellentesque lacus eleifend lacinia...
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Date :
-            </a>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Place:
-            </a>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Volunteers:
-            </a>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <button onclick="window.location.href='eventpage.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Show more
-            </button>
-        </div>
-        <div class="mdl-card__menu">
-            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                <i class="material-icons">share</i>
-            </button>
-        </div>
-    </div>
 
-    <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin-left:10%;margin-bottom:2%; margin-top: 10%; display:inline-block">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">Title</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris sagittis pellentesque lacus eleifend lacinia...
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Date :
-            </a>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Place:
-            </a>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Volunteers:
-            </a>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <button onclick="window.location.href='eventpage.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Show more
-            </button>
-        </div>
-        <div class="mdl-card__menu">
-            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                <i class="material-icons">share</i>
-            </button>
-        </div>
-    </div>
 
-    <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin-left:10%;margin-bottom:2%; margin-top: 10%; display:inline-block">
-        <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">Title</h2>
-        </div>
-        <div class="mdl-card__supporting-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris sagittis pellentesque lacus eleifend lacinia...
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Date :
-            </a>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Place:
-            </a>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Volunteers:
-            </a>
-        </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <button onclick="window.location.href='eventpage.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Show more
-            </button>
-        </div>
-        <div class="mdl-card__menu">
-            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                <i class="material-icons">share</i>
-            </button>
-        </div>
-    </div>
+
 
 
 
@@ -220,4 +125,4 @@
 
 
 </body>
-</html
+</html>
