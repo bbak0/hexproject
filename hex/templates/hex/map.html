@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <script src="scripts/jquery.min.js"></script>
+	<title>A Basic Map</title>
+	<style>
+		#map {
+			height: 50%;
+			width: 50%; <! to be changed as you want>
+		}
+		/* Optional: Makes the sample page fill the window. */
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+	<script>
+	function initMap() {
+		var mapOptions = {
+			zoom: 3,
+			center: new google.maps.LatLng(37.5, -122),
+			mapTypeId: 'roadmap'
+		};
+		var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    $.ajax({
+	     type: "GET",
+	     async: true,
+	     url: "mockEvents.xml",
+	     dataType: "xml",
+	     success:
+	     function (xml) {
+        var places = xml.documentElement.getElementsByTagName("place");
+
+          for (var i = 0; i < places.length; i++) {
+	           var lat = places[i].getAttribute('latitude');
+	            var long = places[i].getAttribute('longitude');
+	             var latLng = new google.maps.LatLng(lat, long);
+	              var marker = new google.maps.Marker({
+		                position:  latLng,
+		                  map: map,
+		                    label:places[i].name
+	       });
+        }
+	     }
+     });
+	}
+	</script>
+</head>
+<body>
+<div id="map"></div>
+<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2ZqV3zUeyPYP8xaoDWO3ZuOBzxfesJs4&callback=initMap">
+</script>
+</body>
+</html>
