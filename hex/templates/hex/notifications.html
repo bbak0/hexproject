@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daghub</title>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<!-- Animate.css -->
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Superfish -->
+	<link rel="stylesheet" href="/css/superfish.css">
+
+	<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/util.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><img src="../images/logo.png" alt="logo" width="60px"> chariteasy</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../home.html"><span><img src="../images/dashboard.png" alt="dashboard" width="25px"></span> Dashboard <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../settings"><span><img src="../images/settings.png" alt="settings" width="25px"></span> Settings</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 80px;">
+        <div class="row">
+            <div class="col-lg-3 col-md-4">
+                <!-- <h2 class="set-h">Settings</h2> -->
+                <ul class="ul-set">
+                    <a href="../settings/security.html"><li>Security</li></a>
+                    <a href="../settings/notifications.html"><li class="active-li">Email Notifications <i class="fa fa-long-arrow-right"></i></li></a>
+                </ul>
+            </div>
+            <div class="col-lg-9 col-md-8 set-m">
+                <div class="switch_box">
+                    <div class="switch_box box_1">
+                        <input type="checkbox" class="switch_1" checked>
+                    </div>
+                </div>
+                <h2 class="unsub">To unsubscribe from newsletter make sure to uncheck the checkbox.</h2>
+            </div>
+        </div>
+    </div>
+
+    <div style="height: 34.6vh !important">
+        <!-- <div class="container-fluid" style="margin-top: 80px; margin-bottom: 80px;">
+            
+        </div> -->
+    </div>
+
+    <div class="footer-main">
+        <div class="container">
+            <div class="footer-content">
+                <div class="row text-center">
+                    <div class="col-md-3 col-sm-6 col-12 footer-text">
+                        <h1 class="header-footer">
+                            Learn
+                        </h1>
+                        <hr class="footer-hr">
+                        <a href="../misc/what-is-dag.html"><p>What is DAG?</p></a>
+                        <a href="../withdraw"><p>Iota Wallet</p></a>
+                        <a href="../withdraw"><p>Nano Wallet</p></a>
+                        <a href="../withdraw"><p>Byteball Wallet</p></a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 footer-text">
+                        <h1 class="header-footer">
+                            Company
+                        </h1>
+                        <hr class="footer-hr">
+                        <a href="../misc/about-us.html"><p>About Us</p></a>
+                        <a href="../misc/about-us.html"><p>Blog</p></a>
+                        <a href="../misc/fees.html"><p>Fees</p></a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 footer-text">
+                        <h1 class="header-footer">
+                            Resources
+                        </h1>
+                        <hr class="footer-hr">
+                        <a href="../misc/legal.html"><p>Legal</p></a>
+                        <a href="../misc/status.html"><p>Status</p></a>
+                        <a href="../misc/support.html"><p>Support (Zendesk)</p></a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-12 footer-text">
+                        <h1 class="header-footer">
+                            Address
+                        </h1>
+                        <hr class="footer-hr">
+                        <p style="line-height: 15px;">Rue Cetatii, number 134, block 15, apartement 67, floor 2.</p>
+                        <span class="icon-social">
+                            <a href="">
+                            	<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 252 252" width="25px" height="25px"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,252v-252h252v252z" fill="none"/><path d="M0,126c0,-69.58788 56.41212,-126 126,-126c69.58788,0 126,56.41212 126,126c0,69.58788 -56.41212,126 -126,126c-69.58788,0 -126,-56.41212 -126,-126zM126,241.92c64.02085,0 115.92,-51.89915 115.92,-115.92c0,-64.02085 -51.89915,-115.92 -115.92,-115.92c-64.02085,0 -115.92,51.89915 -115.92,115.92c0,64.02085 51.89915,115.92 115.92,115.92z" fill="#ffffff"/><g fill="#ffffff"><g id="surface1"><path d="M98.952,190.05788c0,3.44137 -1.84144,5.49412 -4.45266,5.49412c-0.92072,0 -1.94709,-0.25659 -3.03384,-0.79997l-42.11156,-21.32747c-2.47538,-1.25278 -4.49794,-4.57341 -4.49794,-7.36575v-104.53931c0,-2.76216 1.46409,-4.39228 3.56212,-4.39228c0.73959,0 1.56975,0.19622 2.43009,0.63394l1.47919,0.75469h0.01509l46.41328,23.50097c0.07547,0.04528 0.13584,0.12075 0.19622,0.18113zM147.58406,63.72319l2.83762,-4.66397c1.01128,-1.66031 2.86781,-2.61122 4.75453,-2.61122c0.43772,0 0.89053,0.06038 1.32825,0.18113c0.33206,0.07547 0.67922,0.19622 1.04147,0.37734l48.94903,24.78394c0.0151,0 0.0151,0.01509 0.0151,0.01509l0.04528,0.01509c0.03019,0.0151 0.03019,0.06038 0.06037,0.07547c0.2415,0.19622 0.34716,0.52828 0.18113,0.79997l-48.75281,80.23837l-4.98094,8.18081l-32.30063,-63.2579zM106.68,147.65953v-50.39803l34.70053,67.98225l-31.21387,-15.80316zM207.144,190.05788c0,3.23006 -1.91691,5.0715 -4.73944,5.0715c-1.26788,0 -2.71688,-0.36225 -4.24135,-1.13203l-6.9884,-3.54703l-31.21387,-15.80316l47.18306,-77.64225z"/></g></g><path d="M126,252c-69.58788,0 -126,-56.41212 -126,-126v0c0,-69.58788 56.41212,-126 126,-126v0c69.58788,0 126,56.41212 126,126v0c0,69.58788 -56.41212,126 -126,126z" fill="none"/><path d="M126,241.92c-64.02085,0 -115.92,-51.89915 -115.92,-115.92v0c0,-64.02085 51.89915,-115.92 115.92,-115.92h0c64.02085,0 115.92,51.89915 115.92,115.92v0c0,64.02085 -51.89915,115.92 -115.92,115.92z" fill="none"/><path d="M126,252c-69.58788,0 -126,-56.41212 -126,-126v0c0,-69.58788 56.41212,-126 126,-126v0c69.58788,0 126,56.41212 126,126v0c0,69.58788 -56.41212,126 -126,126z" fill="none"/><path d="M126,241.92c-64.02085,0 -115.92,-51.89915 -115.92,-115.92v0c0,-64.02085 51.89915,-115.92 115.92,-115.92h0c64.02085,0 115.92,51.89915 115.92,115.92v0c0,64.02085 -51.89915,115.92 -115.92,115.92z" fill="none"/></g></svg>
+
+
+                            </a>
+                        </span>
+                        <span class="icon-social">
+                            <a href="">
+                            	<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve" class=""><g><g>
+	<g>
+		<path d="M612,306C612,137.004,474.995,0,306,0C137.004,0,0,137.004,0,306c0,168.995,137.004,306,306,306    C474.995,612,612,474.995,612,306z M27.818,306C27.818,152.36,152.36,27.818,306,27.818S584.182,152.36,584.182,306    S459.64,584.182,306,584.182S27.818,459.64,27.818,306z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/>
+		<path d="M317.739,482.617V306h58.279l9.208-58.529h-67.487v-29.348c0-15.272,5.007-29.849,26.928-29.849h43.813v-58.418h-62.201    c-52.298,0-66.569,34.438-66.569,82.175v35.413h-35.885V306h35.885v176.617H317.739L317.739,482.617z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/>
+	</g>
+</g></g> </svg>
+
+                            </a>
+                        </span>
+                        <span class="icon-social">
+                            <a href="">
+                            	<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 612 612" style="enable-background:new 0 0 612 612;" xml:space="preserve" class=""><g><g>
+	<g>
+		<path d="M437.219,245.162c0-3.088-0.056-6.148-0.195-9.18c13.214-9.848,24.675-22.171,33.744-36.275    c-12.129,5.453-25.148,9.097-38.835,10.626c13.965-8.596,24.675-22.338,29.738-38.834c-13.075,7.928-27.54,13.603-42.924,16.552    c-12.323-14.021-29.904-22.95-49.35-23.284c-37.332-0.612-67.598,30.934-67.598,70.463c0,5.619,0.584,11.072,1.752,16.329    c-56.22-3.616-106.042-32.881-139.369-77c-5.814,10.571-9.152,22.922-9.152,36.164c0,25.037,11.934,47.291,30.071,60.421    c-11.099-0.5-21.503-3.866-30.627-9.375c0,0.306,0,0.612,0,0.918c0,34.996,23.312,64.316,54.245,71.159    c-5.675,1.613-11.656,2.448-17.804,2.421c-4.367-0.028-8.596-0.501-12.713-1.392c8.596,28.681,33.577,49.628,63.147,50.323    c-23.145,19.194-52.298,30.655-83.955,30.572c-5.453,0-10.849-0.361-16.135-1.029c29.933,20.53,65.456,32.491,103.65,32.491    C369.23,447.261,437.219,339.048,437.219,245.162z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/>
+		<path d="M612,306C612,137.004,474.995,0,306,0C137.004,0,0,137.004,0,306c0,168.995,137.004,306,306,306    C474.995,612,612,474.995,612,306z M27.818,306C27.818,152.36,152.36,27.818,306,27.818S584.182,152.36,584.182,306    S459.64,584.182,306,584.182S27.818,459.64,27.818,306z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/>
+	</g>
+</g></g> </svg>
+
+                            </a>
+                        </span>
+                        <span class="icon-social">
+                            <a href="">
+                            	<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="25px" height="25px" class=""><g><g>
+	<g>
+		<path d="M437.019,74.981C388.667,26.628,324.379,0,256,0S123.333,26.628,74.981,74.981C26.628,123.333,0,187.621,0,256    s26.628,132.667,74.981,181.019C123.333,485.372,187.621,512,256,512s132.667-26.628,181.019-74.981S512,324.379,512,256    S485.372,123.333,437.019,74.981z M256,495.832C123.756,495.832,16.168,388.244,16.168,256S123.756,16.168,256,16.168    S495.832,123.756,495.832,256S388.244,495.832,256,495.832z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/>
+	</g>
+</g><g>
+	<g>
+		<path d="M400.989,98.637c-2.482-1.87-5.817-2.15-8.577-0.722L79.822,259.599c-2.702,1.397-4.391,4.194-4.371,7.236    c0.02,3.042,1.747,5.815,4.469,7.176l81.764,40.88v81.006c0,2.12,0.721,4.218,2.18,5.757c1.614,1.703,3.759,2.557,5.905,2.557    c1.352,0,2.704-0.338,3.927-1.018l93.544-51.969l71.597,30.684c1.523,0.653,3.209,0.923,4.839,0.619    c3.355-0.627,5.849-3.197,6.485-6.372l18.115-90.577c1-5.003-2.826-9.67-7.928-9.67c-3.854-0.002-7.171,2.718-7.927,6.496    l-16.162,80.808l-66.295-28.412c-2.297-0.985-4.923-0.85-7.111,0.363l-85,47.223v-72.492c0-3.062-1.73-5.86-4.469-7.231    l-72.015-36.007l283.53-146.654l-24.605,123.023c-1,5.003,2.826,9.67,7.928,9.67c3.853,0,7.171-2.721,7.928-6.499l27.903-139.517    C404.662,103.633,403.471,100.506,400.989,98.637z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/>
+	</g>
+</g><g>
+	<g>
+		<path d="M348.576,164.757c-2.541-3.216-7.089-4.024-10.581-1.873l-140.126,86.232c-2.391,1.471-3.847,4.078-3.847,6.885v86.232    c-0.001,3.75,2.577,7.006,6.225,7.868c0.621,0.147,1.244,0.218,1.86,0.218c3.007,0,5.837-1.686,7.228-4.47l31.75-63.5    l106.863-106.863C350.847,172.586,351.117,167.975,348.576,164.757z M228.725,271.842c-0.613,0.614-1.125,1.324-1.513,2.101    l-17.022,34.043v-47.468l77.636-47.777L228.725,271.842z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/>
+	</g>
+</g></g> </svg>
+
+
+                            </a>
+                        </span>
+                        <span class="icon-social">
+                            <a href="">
+                            	<?xml version="1.0"?>
+<svg style="width: 25px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="25px" height="25px" class=""><g><g>
+	<g>
+		<path d="M437.019,74.981C388.667,26.628,324.379,0,256,0S123.333,26.628,74.981,74.981C26.628,123.333,0,187.621,0,256    s26.628,132.667,74.981,181.019C123.333,485.372,187.621,512,256,512s132.667-26.628,181.019-74.981S512,324.379,512,256    S485.372,123.333,437.019,74.981z M256,495.832C123.756,495.832,16.168,388.244,16.168,256S123.756,16.168,256,16.168    S495.832,123.756,495.832,256S388.244,495.832,256,495.832z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/>
+	</g>
+</g><g>
+	<g>
+		<path d="M351.439,368.197c-2.859-3.431-7.957-3.893-11.386-1.036c-21.997,18.331-51.848,28.426-84.053,28.426    s-62.057-10.096-84.053-28.426c-3.43-2.856-8.526-2.395-11.386,1.035c-2.859,3.43-2.395,8.527,1.035,11.386    c24.897,20.748,58.423,32.174,94.404,32.174s69.507-11.426,94.404-32.173C353.834,376.724,354.298,371.627,351.439,368.197z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/>
+	</g>
+</g><g>
+	<g>
+		<path d="M468.884,234.442c0-34.176-27.803-61.979-61.979-61.979c-16.932,0-33.183,7.059-44.801,19.173    c-27.526-17.51-61.328-28.388-98.021-29.79v-50.925l17.626-5.876c5.038,18.272,22.602,31.404,42.84,29.508    c19.499-1.826,35.068-17.794,36.443-37.331c1.66-23.596-17.068-43.328-40.319-43.328c-20.258,0-37.08,14.981-39.977,34.446    l-27.253,9.085c-3.301,1.101-5.527,4.19-5.527,7.669v56.751c-36.694,1.4-70.495,12.279-98.023,29.791    c-11.616-12.115-27.86-19.174-44.798-19.174c-34.176,0-61.979,27.803-61.979,61.979c0,25.056,15.304,47.605,37.992,57.155    c-0.882,5.997-1.343,12.103-1.343,18.297c0,81.724,79.059,148.211,176.236,148.211c49.571,0,94.424-17.305,126.476-45.103    c3.495-3.03,3.675-8.396,0.404-11.666l-0.101-0.101c-2.955-2.955-7.689-3.128-10.846-0.391    c-29.18,25.299-70.361,41.094-115.933,41.094c-88.261,0-160.067-59.234-160.067-132.042S167.739,177.853,256,177.853    s160.067,59.234,160.067,132.042c0,22.907-7.109,44.47-19.602,63.268c-2.085,3.137-1.617,7.319,1.047,9.982    c0.039,0.039,0.077,0.077,0.115,0.115c3.58,3.58,9.516,2.942,12.317-1.274c14.194-21.352,22.291-45.941,22.291-72.092    c0-6.195-0.461-12.3-1.343-18.297C453.58,282.048,468.884,259.499,468.884,234.442z M320.674,70.063    c13.373,0,24.253,10.879,24.253,24.253s-10.879,24.253-24.253,24.253c-13.373,0-24.253-10.879-24.253-24.253    S307.3,70.063,320.674,70.063z M84.592,275.408c-15.229-7.656-25.308-23.483-25.308-40.965c0-25.26,20.55-45.811,45.81-45.811    c11.895,0,22.975,4.455,31.404,12.436C111.265,220.678,92.844,246.398,84.592,275.408z M427.408,275.408    c-8.252-29.008-26.671-54.728-51.905-74.339c8.43-7.981,19.513-12.437,31.402-12.437c25.26,0,45.81,20.55,45.81,45.811    C452.716,251.924,442.636,267.751,427.408,275.408z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/>
+	</g>
+</g><g>
+	<g>
+		<path d="M180.547,237.137c-22.289,0-40.421,18.132-40.421,40.421c0,22.289,18.132,40.421,40.421,40.421    s40.421-18.132,40.421-40.421S202.836,237.137,180.547,237.137z M180.547,301.811c-13.373,0-24.253-10.879-24.253-24.253    c0-13.373,10.879-24.253,24.253-24.253c13.373,0,24.253,10.879,24.253,24.253C204.8,290.931,193.921,301.811,180.547,301.811z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/>
+	</g>
+</g><g>
+	<g>
+		<path d="M331.453,237.137c-22.289,0-40.421,18.132-40.421,40.421c0,22.289,18.132,40.421,40.421,40.421    s40.421-18.132,40.421-40.421C371.874,255.269,353.741,237.137,331.453,237.137z M331.453,301.811    c-13.373,0-24.253-10.879-24.253-24.253c0-13.373,10.879-24.253,24.253-24.253s24.253,10.879,24.253,24.253    C355.705,290.931,344.826,301.811,331.453,301.811z" data-original="#000000" class="active-path" data-old_color="#ffffff" fill="#ffffff"/>
+	</g>
+</g></g> </svg>
+
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <script src="/scripts/jquery.min.js"></script>
+    <script src="/scripts/jquery.easing.1.3.js"></script>
+
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    
+	<script src="/scripts/jquery.waypoints.min.js"></script>
+	<script src="/scripts/jquery.stellar.min.js"></script>
+	<script src="/scripts/hoverIntent.js"></script>
+    <script src="/scripts/superfish.js"></script>
+    
+    <!-- <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<!-- Main JS (Do not remove) -->
+    <script src="js/main.js"></script>
+    <script src="/scripts/script.js"></script>
+    
+    <script src="js/jquery.mask.min.js"></script>
+
+</body>
+</html>
