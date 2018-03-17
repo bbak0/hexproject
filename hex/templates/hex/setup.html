@@ -33,24 +33,47 @@
     <div class="row">
         <div class="col-md-5 col-md-offset-3">
             <form method="post" action="">
-                <div class="form-group">
-                    <label for="formName">Select a type of event that you would volunteer for</label>
-                    <select class="form-control" id="forName" name="forName">
-                        <option>Architecture, Planning &amp; Environmental Design</option>
-                        <option>Arts &amp; Entertainment</option>
-                        <option>Business</option>
-                        <option>Biological &amp; Physical Sciences</option>
-                        <option>Communications</option>
-                        <option>Education</option>
-                        <option>Engineering &amp; Computer Science</option>
-                        <option>Environment</option>
-                        <option>Government</option>
-                        <option>Health &amp; Medicine</option>
-                        <option>International</option>
-                        <option>Law &amp; Public Policy</option>
-                        <option>Nonprofit</option>
-                    </select>
+
+               <div class="ch" id="ch">
+                   <label for="ch">Check your event preferences!</label>
+                <div class="checkbox">
+
+                    <label><input type="checkbox" value="AE">Arts and Entertainment</label>
                 </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="BZ">Business</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="BP">Biological and Physical Sciences</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="ED">Education</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="EV">Environment</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="GV">Government</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="HM">Health &amp; Medicine</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="IT">International</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="LP">Law and Public Policy</label>
+                </div>
+                   <div class="checkbox">
+                       <label><input type="checkbox" value="NP">Nonprofit</label>
+                   </div>
+                   <div class="checkbox">
+                       <label><input type="checkbox" value="SO">Society</label>
+                   </div>
+                   <div class="checkbox">
+                       <label><input type="checkbox" value="TC">Technology</label>
+                   </div>
+               </div>
                 <div class="form-group">
                     <label for="address">Type your birthdate (dd-mm-yyyy)</label>
                     <input id="myInput2" id="address2" class="form-control" type="text" name="myAdress" placeholder="Birth date">
@@ -71,7 +94,7 @@
 
 
 
-                <button type="submit" id="submit" name="submit" class="btn btn-danger btn-lg center-block">Create event</button>
+                <button type="submit" id="submit" name="submit" class="btn btn-danger btn-lg center-block">Update preferences</button>
             </form>
 
         </div><!--col-md-5-->
