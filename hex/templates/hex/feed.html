@@ -1,5 +1,5 @@
 {% load static %}
-
+{{request.user.id}}
 {%if userType == "Volunteer"%}
   {% include 'hex/home-vol.html' %}
 {%endif%}
