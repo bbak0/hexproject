@@ -36,8 +36,15 @@ class Organizer(models.Model):
 
 class Events(models.Model):
 	date = models.DateTimeField()
-	#x_coordinate = models.DoubleField(null = True) - wrong type
-	#y_coordinate = models.DoubleField(null = True)
 	title = models.CharField(max_length = 50)
 	description = models.TextField()
 	organizer = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
+<<<<<<< HEAD
+	objects = models.GeoManager()
+    point = models.PointField(srid=4326)
+    def latitude(self):
+        return self.point.y
+    def longitude(self):
+        return self.point.x
+=======
+>>>>>>> 7cddc5747b57c02dc6ac29109b35d025f0335132
