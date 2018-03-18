@@ -6,6 +6,18 @@ from .models import Volunteer, Benefactor, Organizer, Events, EventRegistration
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 
+TYPEOFEVENTS = {'Arts and Entertainment' : 'AE',
+               'Business' : 'BZ',
+               'Biological and Physical Sciences' : 'BP',
+               'Education' : 'ED',
+               'Environment' : 'EV',
+               'Government' : 'GV',
+               'Health &amp; Medicine' : 'HM',
+               'International' : 'IT',
+               'Law and Public Policy' : 'LP',
+               'Nonprofit' : 'NP',
+               'Society' : 'SO',
+               'Technology' : 'TC'}
 # Create your views here.
 def signup(request):
     if request.user.is_authenticated:
@@ -126,4 +138,6 @@ def event_deregister(request, event_id):
 
 @login_required
 def setup(request):
-    return render(request, 'hex/setup.html', )
+    if (getUserType(request.user.id) == "Volunteer"):
+        return render(request, 'hex/setup.html', Volunteer.preferences)
+    return render(request, 'hex/setup.html',)
