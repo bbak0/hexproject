@@ -14,7 +14,7 @@
       <file leaf-file-name="home-ben.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/hex/home-ben.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
+            <state relative-caret-position="-73">
               <caret line="21" column="68" lean-forward="false" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
               <folding />
             </state>
@@ -24,8 +24,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/hex/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+            <state relative-caret-position="120">
+              <caret line="8" column="64" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -34,8 +34,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/hex/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6270">
-              <caret line="418" column="5" lean-forward="false" selection-start-line="418" selection-start-column="5" selection-end-line="418" selection-end-column="5" />
+            <state relative-caret-position="-5346">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="32" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -44,8 +44,8 @@
       <file leaf-file-name="eventpage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/hex/eventpage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3570">
-              <caret line="238" column="0" lean-forward="false" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
+            <state relative-caret-position="287">
+              <caret line="100" column="23" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="100" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -54,27 +54,19 @@
       <file leaf-file-name="setup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/hex/setup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="923">
-              <caret line="187" column="61" lean-forward="true" selection-start-line="187" selection-start-column="61" selection-end-line="187" selection-end-column="61" />
-              <folding>
-                <element signature="e#2381#2386#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="3165">
+              <caret line="211" column="61" lean-forward="false" selection-start-line="211" selection-start-column="61" selection-end-line="211" selection-end-column="61" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile_page.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="profile_page.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/hex/profile_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="90" lean-forward="false" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="330">
+              <caret line="22" column="90" lean-forward="false" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/templates/hex/home-org.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="26" column="90" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="26" selection-end-column="90" />
+              <caret line="26" column="90" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="26" selection-end-column="90" />
               <folding />
             </state>
           </provider>
@@ -99,17 +91,19 @@
       <file leaf-file-name="home-vol.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/hex/home-vol.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="63" column="54" lean-forward="false" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
-              <folding>
-                <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#3403#3408#0" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="-384">
+              <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="coming_soon.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/hex/coming_soon.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,11 +121,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/hex/home-ben.html" />
-        <option value="$PROJECT_DIR$/templates/hex/index.html" />
         <option value="$PROJECT_DIR$/templates/hex/eventpage.html" />
         <option value="$PROJECT_DIR$/templates/hex/setup.html" />
-        <option value="$PROJECT_DIR$/templates/hex/home-vol.html" />
         <option value="$PROJECT_DIR$/templates/hex/profile_page.html" />
+        <option value="$PROJECT_DIR$/templates/hex/home-vol.html" />
+        <option value="$PROJECT_DIR$/templates/hex/index.html" />
+        <option value="$PROJECT_DIR$/templates/hex/coming_soon.html" />
       </list>
     </option>
   </component>
@@ -162,12 +157,31 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="hex" type="b2602c69:ProjectViewProjectNode" />
               <item name="hex" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="hex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hex" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="hex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hex" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="hex" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="hex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hex" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="hex" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="images" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="hex" type="b2602c69:ProjectViewProjectNode" />
@@ -184,7 +198,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -223,12 +236,13 @@
       <workItem from="1521322421944" duration="389000" />
       <workItem from="1521324248925" duration="1532000" />
       <workItem from="1521330643159" duration="163000" />
-      <workItem from="1521332068310" duration="62000" />
+      <workItem from="1521332068310" duration="581000" />
+      <workItem from="1521339190530" duration="777000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5128000" />
+    <option name="totallyTimeSpent" value="6424000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -239,12 +253,12 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -289,6 +303,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/hex/images/dashboard.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hex/home-org.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="90" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="26" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hex/home-vol.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="6" lean-forward="false" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hex/eventpage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1500">
+          <caret line="100" column="23" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="100" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hex/home-ben.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="68" lean-forward="false" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hex/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hex/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6270">
+          <caret line="418" column="5" lean-forward="false" selection-start-line="418" selection-start-column="5" selection-end-line="418" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/hex/eventpage.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3570">
@@ -306,15 +373,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="63" column="54" lean-forward="false" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3403#3408#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -330,9 +389,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2805">
           <caret line="187" column="61" lean-forward="true" selection-start-line="187" selection-start-column="61" selection-end-line="187" selection-end-column="61" />
-          <folding>
-            <element signature="e#2381#2386#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -385,15 +442,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="945">
           <caret line="63" column="54" lean-forward="false" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3403#3408#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -438,15 +487,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="67" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3403#3408#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -486,15 +527,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="67" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3403#3408#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -523,22 +556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="68" lean-forward="true" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3403#3408#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/hex/home-ben.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="68" lean-forward="false" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -549,75 +566,75 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/hex/login.html">
+    <entry file="file://$PROJECT_DIR$/templates/hex/home-org.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6270">
-          <caret line="418" column="5" lean-forward="false" selection-start-line="418" selection-start-column="5" selection-end-line="418" selection-end-column="5" />
+        <state relative-caret-position="390">
+          <caret line="26" column="90" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="26" selection-end-column="90" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/hex/eventpage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="238" column="0" lean-forward="false" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
+        <state relative-caret-position="287">
+          <caret line="100" column="23" lean-forward="false" selection-start-line="98" selection-start-column="12" selection-end-line="100" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/hex/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="54" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/hex/home-vol.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="54" lean-forward="false" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#3403#3408#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/hex/setup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="923">
-          <caret line="187" column="61" lean-forward="true" selection-start-line="187" selection-start-column="61" selection-end-line="187" selection-end-column="61" />
-          <folding>
-            <element signature="e#2381#2386#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/hex/home-org.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="90" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="26" selection-end-column="90" />
+        <state relative-caret-position="3165">
+          <caret line="211" column="61" lean-forward="false" selection-start-line="211" selection-start-column="61" selection-end-line="211" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/hex/profile_page.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="90" lean-forward="false" selection-start-line="22" selection-start-column="90" selection-end-line="22" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hex/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5346">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="32" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hex/home-ben.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73">
+          <caret line="21" column="68" lean-forward="false" selection-start-line="21" selection-start-column="68" selection-end-line="21" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hex/home-vol.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-384">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hex/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="64" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/hex/coming_soon.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="21" column="90" lean-forward="false" selection-start-line="21" selection-start-column="90" selection-end-line="21" selection-end-column="90" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
