@@ -141,4 +141,10 @@ def event_deregister(request, event_id):
 
 @login_required
 def setup(request):
+    if (getUserType(request.user.id) == "Volunteer"):
+        vol = Volunteer.objects.get(user = request.user.id)
+        choices = vol.preferences
+        choice_list = str(choices)
+        choice_list = choice_list.split
+        return render(request, 'hex/setup.html', {"list": choice_list})
     return render(request, 'hex/setup.html', )

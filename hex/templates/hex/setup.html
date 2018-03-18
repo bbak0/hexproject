@@ -34,11 +34,11 @@
     <div class="row">
         <div class="col-md-5 col-md-offset-3">
             <form method="post" action="">
-
+              {% csrf_token %}
                <div class="ch" id="ch">
                    <label for="ch">Check your event preferences!</label>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="AE" {%if preferences.contain(value))%}
+                    <label><input type="checkbox" value="AE" {%if value in list%}
                     checked
                     {%endif%}>Arts and Entertainment</label>
                 </div>
