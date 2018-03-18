@@ -19,6 +19,19 @@ TYPEOFEVENTS = {'Arts and Entertainment' : 'AE',
                'Nonprofit' : 'NP',
                'Society' : 'SO',
                'Technology' : 'TC'}
+
+PREFERENCES = (('AE', 'Arts and Entertainment'),
+               ('BZ','Business'),
+               ('BP','Biological and Physical Sciences'),
+               ('ED','Education'),
+               ('EV','Environment'),
+               ('GV','Government'),
+               ('HM','Health &amp; Medicine'),
+               ('IT','International'),
+               ('LP','Law and Public Policy'),
+               ('NP','Nonprofit'),
+               ('SO','Society'),
+               ('TC','Technology'))
 # Create your views here.
 def signup(request):
     if request.user.is_authenticated:
@@ -141,6 +154,9 @@ def event_deregister(request, event_id):
 
 @login_required
 def setup(request):
+    if request.method == 'POST':
+        dictionary = request.POST
+        print(dictionary)
     if (getUserType(request.user.id) == "Volunteer"):
         vol = Volunteer.objects.get(user = request.user.id)
         choices = vol.preferences

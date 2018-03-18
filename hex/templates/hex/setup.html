@@ -33,7 +33,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-5 col-md-offset-3">
-            <form method="post" action="">
+            <form method="post" action="{% url 'setup' %}">
               {% csrf_token %}
                <div class="ch" id="ch">
                    <label for="ch">Check your event preferences!</label>
@@ -43,37 +43,59 @@
                     {%endif%}>Arts and Entertainment</label>
                 </div>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="BZ">Business</label>
+                    <label><input type="checkbox" value="BZ" {%if value in list%}
+                    checked
+                    {%endif%}>Business</label>
                 </div>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="BP">Biological and Physical Sciences</label>
+                    <label><input type="checkbox" value="BP" {%if value in list%}
+                    checked
+                    {%endif%}>Biological and Physical Sciences</label>
                 </div>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="ED">Education</label>
+                    <label><input type="checkbox" value="ED" {%if value in list%}
+                    checked
+                    {%endif%}>Education</label>
                 </div>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="EV">Environment</label>
+                    <label><input type="checkbox" value="EV" {%if value in list%}
+                    checked
+                    {%endif%}>Environment</label>
                 </div>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="GV">Government</label>
+                    <label><input type="checkbox" value="GV" {%if value in list%}
+                    checked
+                    {%endif%}>Government</label>
                 </div>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="HM">Health &amp; Medicine</label>
+                    <label><input type="checkbox" value="HM" {%if value in list%}
+                    checked
+                    {%endif%}>Health &amp; Medicine</label>
                 </div>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="IT">International</label>
+                    <label><input type="checkbox" value="IT" {%if value in list%}
+                    checked
+                    {%endif%}>International</label>
                 </div>
                 <div class="checkbox">
-                    <label><input type="checkbox" value="LP">Law and Public Policy</label>
+                    <label><input type="checkbox" value="LP" {%if value in list%}
+                    checked
+                    {%endif%}>Law and Public Policy</label>
                 </div>
                    <div class="checkbox">
-                       <label><input type="checkbox" value="NP">Nonprofit</label>
+                       <label><input type="checkbox" value="NP" {%if value in list%}
+                       checked
+                       {%endif%}>Nonprofit</label>
                    </div>
                    <div class="checkbox">
-                       <label><input type="checkbox" value="SO">Society</label>
+                       <label><input type="checkbox" value="SO" {%if value in list%}
+                       checked
+                       {%endif%}>Society</label>
                    </div>
                    <div class="checkbox">
-                       <label><input type="checkbox" value="TC">Technology</label>
+                       <label><input type="checkbox" value="TC"{%if value in list%}
+                       checked
+                       {%endif%}>Technology</label>
                    </div>
                </div>
                 <div class="form-group">
@@ -95,11 +117,12 @@
 
 
 
+                <button style="display:inline-block" onclick="window.location.href = '{% url 'feed' %}'" class="btn btn-danger btn-lg center-block">Back</button>
 
-                <button type="submit" id="submit" name="submit" class="btn btn-danger btn-lg center-block">Update preferences</button>
+                <button  style="margin-left:4%;display:inline-block"type="submit" id="submit" name="submit" class="btn btn-danger btn-lg center-block">Update preferences</button>
             </form>
 
-        </div><!--col-md-5-->
+        </div><!--col-md-5--
 
     </div><!--row-->
 
