@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-=======
 {% load static %}
 {% include 'hex/navigation.html'%}
->>>>>>> 8d53250f68f747625664d17cf4fdf718964d234c
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,42 +50,16 @@
         color: #fff;
     }
 </style>
+{% if not events %}
+<div>
+  <h1>You don't have any event recommendation. Fill your preferences and city in the settings page to see recommendations.</h1>
+</div>
+{% endif %}
 
-<form class="mdl-cell--4-col" action="#!" style="margin-left: 10%; margin-top: 5%; margin-bottom:-5%;">
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
-        <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
-            <i class="large material-icons">search</i>
-        </label>
-        <div class="mdl-textfield__expandable-holder">
-            <input class="mdl-textfield__input" type="text" id="search">
-            <label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
-        </div>
-    </div>
-</form>
-
-<form action="#" style="margin-left: 25%">
-    <div class="mdl-textfield mdl-js-textfield getmdl-select">
-        <input class="mdl-textfield__input" value="" id="sort" readonly/>
-        <input value="" type="hidden" name="sort"/>
-        <label class="mdl-textfield__label" for="sort">Sort by</label>
-        <ul class="mdl-menu mdl-menu--bottom-left mdl-js-menu" for="sort">
-            <li class="mdl-menu__item" data-val="AE">Arts and Entertainment</li>
-            <li class="mdl-menu__item" data-val="BZ">Business</li>
-            <li class="mdl-menu__item" data-val="BP">Biological and Physical Sciences</li>
-            <li class="mdl-menu__item" data-val="ED">Education</li>
-            <li class="mdl-menu__item" data-val="GV">Government</li>
-            <li class="mdl-menu__item" data-val="HM">Health &amp; Medicine</li>
-            <li class="mdl-menu__item" data-val="IT">International</li>
-            <li class="mdl-menu__item" data-val="LP">Law and Public Policy</li>
-            <li class="mdl-menu__item" data-val="NP">Nonprofit</li>
-            <li class="mdl-menu__item" data-val="SO">Society</li>
-            <li class="mdl-menu__item" data-val="TC">Technology</li>
-        </ul>
-    </div>
-</form>
+{%for event in events%}
 <div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin-left:10%;margin-bottom:2%; margin-top: 10%; display:inline-block">
     <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">Title</h2>
+        <h2 class="mdl-card__title-text">{{event.title}}</h2>
     </div>
     <div class="mdl-card__supporting-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -98,6 +69,7 @@
         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             Date :
         </a>
+        <p>dupex</p>
     </div>
     <div class="mdl-card__actions mdl-card--border">
         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
@@ -120,111 +92,9 @@
         </button>
     </div>
 </div>
+{% endfor %}
 
-<div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin-left:10%;margin-bottom:2%; margin-top: 10%; display:inline-block">
-    <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">Title</h2>
-    </div>
-    <div class="mdl-card__supporting-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Mauris sagittis pellentesque lacus eleifend lacinia...
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Date :
-        </a>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Place:
-        </a>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Volunteers:
-        </a>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-        <button onclick="window.location.href='eventpage.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Show more
-        </button>
-    </div>
-    <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-            <i class="material-icons">share</i>
-        </button>
-    </div>
-</div>
 
-<div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin-left:10%;margin-bottom:2%; margin-top: 10%; display:inline-block">
-    <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">Title</h2>
-    </div>
-    <div class="mdl-card__supporting-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Mauris sagittis pellentesque lacus eleifend lacinia...
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Date :
-        </a>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Place:
-        </a>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Volunteers:
-        </a>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-        <button onclick="window.location.href='eventpage.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Show more
-        </button>
-    </div>
-    <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-            <i class="material-icons">share</i>
-        </button>
-    </div>
-</div>
-
-<div class="demo-card-wide mdl-card mdl-shadow--2dp" style="margin-left:10%;margin-bottom:2%; margin-top: 10%; display:inline-block">
-    <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">Title</h2>
-    </div>
-    <div class="mdl-card__supporting-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Mauris sagittis pellentesque lacus eleifend lacinia...
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Date :
-        </a>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Place:
-        </a>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Volunteers:
-        </a>
-    </div>
-    <div class="mdl-card__actions mdl-card--border">
-        <button onclick="window.location.href='eventpage.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Show more
-        </button>
-    </div>
-    <div class="mdl-card__menu">
-        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-            <i class="material-icons">share</i>
-        </button>
-    </div>
-</div>
 
 
 
@@ -235,4 +105,4 @@
 
 
 </body>
-</html
+</html>
