@@ -52,7 +52,24 @@
 </style>
 {% if not events %}
 <div>
-  <h1>You don't have any event recommendation. Fill your preferences and city in the settings page to see recommendations.</h1>
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">No events</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+            Unfortunatelly there are no events for you at the moment. You could try to update your preferences to benefit from more opportunities
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                Update your preferences!
+            </a>
+        </div>
+        <div class="mdl-card__menu">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                <i class="material-icons">share</i>
+            </button>
+        </div>
+    </div>
 </div>
 {% endif %}
 
