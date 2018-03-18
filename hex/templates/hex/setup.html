@@ -100,15 +100,15 @@
                </div>
                 <div class="form-group">
                     <label for="address">Type your birthdate (dd-mm-yyyy)</label>
-                    <input id="myInput2" id="address2" class="form-control" type="text" name="myAdress" placeholder="Birth date">
+                    <input id="myInput2" id="address2" class="form-control" type="text" name="myAdress" placeholder="Birth date" value={{date}}>
                 </div>
                 <div class="form-group">
                     <label for="address">Type the city that is closest to you!</label>
-                    <input id="myInput" id="address" class="form-control" type="text" name="myCountry" placeholder="City">
+                    <input id="myInput" id="address" class="form-control" type="text" name="myCountry" placeholder="City" value={{location}}>
                 </div>
                 <div class="form-group">
                     <label>Description of yourself and why would you make a great volunteer!</label>
-                    <textarea rows="4" class="form-control" id="formDescription" name="formDescription"></textarea>
+                    <textarea rows="4" class="form-control" id="formDescription" name="formDescription" value={{bio}}></textarea>
                 </div>
                 <div class="form-group">
                     <label>Upload a picture of yourself!</label>

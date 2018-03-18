@@ -160,12 +160,17 @@ def event_deregister(request, event_id):
 def setup(request):
     if (getUserType(request.user.id) == "Volunteer"):
         if request.method == 'POST':
+            dictionary = request.POST
+            print(dictionary)
+            bio = dictionary.get("formDescription")
+            location = dictionary.get("myCountry")
+            birth_date = dictionary.get("myAdress")
             vol = Volunteer.objects.get(user = request.user.id)
-            some_var = request.POST.getlist('checks')
-            vol.preferences = some_var
-        city = vol.location
-        choices = vol.preferences
-        return render(request, 'hex/setup.html', {"list": choices})
+            vol.preferences = request.POST.getlist('checks')
+            return render(request, 'hex/setup.html', {"list": vol.preferences,
+                                                        "date" : birth_date,
+                                                        "bio" : bio,
+                                                        "location" : location})
     return render(request, 'hex/setup.html', )
 
 
