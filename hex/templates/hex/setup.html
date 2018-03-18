@@ -38,8 +38,9 @@
                <div class="ch" id="ch">
                    <label for="ch">Check your event preferences!</label>
                 <div class="checkbox">
-
-                    <label><input type="checkbox" value="AE">Arts and Entertainment</label>
+                    <label><input type="checkbox" value="AE" {%if preferences.contain(value))%}
+                    checked
+                    {%endif%}>Arts and Entertainment</label>
                 </div>
                 <div class="checkbox">
                     <label><input type="checkbox" value="BZ">Business</label>

@@ -23,7 +23,7 @@ class Volunteer(models.Model):
     phone_number = models.CharField(max_length=15)
     location = models.CharField(max_length = 30, blank = True)
     birth_date = models.DateField(null = True, blank = True)
-    preferences = MultiSelectField(choices = PREFERENCES, max_choices = 7, max_length = 14, default = None)
+    preferences = MultiSelectField(choices = PREFERENCES, max_choices = 12, max_length = 24, default = None)
 
 class Benefactor(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)

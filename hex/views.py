@@ -126,4 +126,6 @@ def event_deregister(request, event_id):
 
 @login_required
 def setup(request):
-    return render(request, 'hex/setup.html', )
+    if (getUserType(request.user.id) == "Volunteer"):
+        return render(request, 'hex/setup.html', Volunteer.preferences)
+    return render(request, 'hex/setup.html',)
