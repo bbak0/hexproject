@@ -12,4 +12,5 @@ urlpatterns = [
     path('create_event/', views.create_event, name='create_event'),
     path('logout/', logout, {'next_page': settings.LOGOUT_REDIRECT_URL}, name='logout'),
     path('setup/', views.setup, name="setup"),
+    path('profile/<int:userid>', views.profile, name="profile")
 ]

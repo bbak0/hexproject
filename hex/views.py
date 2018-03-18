@@ -113,9 +113,11 @@ def index(request):
 
 def event_view(request, event_id):
     event = Events.objects.get(pk=event_id)
+    userType = getUserType(request.user.id)
     if not event:
         raise Http404
-    return render(request, 'hex/eventpage.html', {"event":event})
+    return render(request, 'hex/eventpage.html', {"event":event,
+                                            "userType": userType,})
 
 def getUserType(id):
     if Volunteer.objects.filter(user=id):
@@ -148,9 +150,12 @@ def event_register(request, event_id):
     reg_event = Events.objects.get(pk=event_id)
     new_registration = EventRegistration(user = request.user, event =  reg_event)
     new_registration.save()
+    return HttpResponse(status=200)
 
 def event_deregister(request, event_id):
-    pass
+    reg_event = Events.objects.get(pk=event_id)
+    event = EventRegistration.objects.get(user = request.user, event = reg_event).delete()
+    return HttpResponse(status=200)
 
 @login_required
 def setup(request):
@@ -164,3 +169,17 @@ def setup(request):
         choice_list = choice_list.split
         return render(request, 'hex/setup.html', {"list": choice_list})
     return render(request, 'hex/setup.html', )
+
+
+def profile(request, userid):
+    u = User.objects.get(pk=userid)
+    type = getUserType(userid)
+    p = None
+    if type == "Volunteer":
+        p = Volunteer.objects.get(user_id = userid)
+    if type == "Organizer":
+        p = Organizer.objects.get(user_id = userid)
+    if type == "Benefactor":
+        p = Benefactor.objects.get(user_id = userid)
+    return render(request, 'hex/profile_page.html', {"user":u,
+                                                    "profile":p})

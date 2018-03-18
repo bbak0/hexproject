@@ -77,11 +77,11 @@
     </div>
     <div class="mdl-card__actions mdl-card--border">
         <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Volunteers:
+            Volunteers: {{event.count}}
         </a>
     </div>
     <div class="mdl-card__actions mdl-card--border">
-        <button onclick="window.location.href='eventpage.html'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        <button onclick="window.location.href = '{% url 'event_view' event_id=event.id %}'" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
             Show more
         </button>
     </div>
