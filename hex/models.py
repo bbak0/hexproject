@@ -4,18 +4,18 @@ from django.dispatch import receiver
 from django.conf import settings
 from multiselectfield import MultiSelectField
 
-PREFERENCES = (('AE', 'Arts and Entertainment'),
-               ('BZ','Business'),
-               ('BP','Biological and Physical Sciences'),
-               ('ED','Education'),
-               ('EV','Environment'),
-               ('GV','Government'),
-               ('HM','Health &amp; Medicine'),
-               ('IT','International'),
-               ('LP','Law and Public Policy'),
-               ('NP','Nonprofit'),
-               ('SO','Society'),
-               ('TC','Technology'))
+PREFERENCES = {'1' : 'Arts and Entertainment',
+               '2' : 'Business',
+               '3' : 'Biological and Physical Sciences',
+               '4' : 'Education',
+               '5' : 'Environment',
+               '6' : 'Government',
+               '7' : 'Health &amp; Medicine',
+               '8' : 'International',
+               '9' : 'Law and Public Policy',
+               '10' : 'Nonprofit',
+               '11' : 'Society',
+               '12' : 'Technology'}
 
 class Volunteer(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
@@ -23,7 +23,7 @@ class Volunteer(models.Model):
     phone_number = models.CharField(max_length=15)
     location = models.CharField(max_length = 30, blank = True)
     birth_date = models.DateField(null = True, blank = True)
-    preferences = MultiSelectField(choices = PREFERENCES, max_choices = 12, max_length = 24, default = None)
+    preferences = models.CharField(max_length = 40, blank = True)
 
 class Benefactor(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)

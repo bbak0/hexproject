@@ -7,18 +7,18 @@ from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.db.models import Count
 
-TYPEOFEVENTS = {'Arts and Entertainment' : 'AE',
-               'Business' : 'BZ',
-               'Biological and Physical Sciences' : 'BP',
-               'Education' : 'ED',
-               'Environment' : 'EV',
-               'Government' : 'GV',
-               'Health &amp; Medicine' : 'HM',
-               'International' : 'IT',
-               'Law and Public Policy' : 'LP',
-               'Nonprofit' : 'NP',
-               'Society' : 'SO',
-               'Technology' : 'TC'}
+TYPEOFEVENTS = {'Arts and Entertainment' : '1',
+               'Business' : '2',
+               'Biological and Physical Sciences' : '3',
+               'Education' : '4',
+               'Environment' : '5',
+               'Government' : '6',
+               'Health &amp; Medicine' : '7',
+               'International' : '8',
+               'Law and Public Policy' : '9',
+               'Nonprofit' : '10',
+               'Society' : '11',
+               'Technology' : '12'}
 
 PREFERENCES = (('AE', 'Arts and Entertainment'),
                ('BZ','Business'),
@@ -93,8 +93,7 @@ def feed(request):
         choices = vol.preferences
         #choices = "AA, BB, DD"
         print(choices)
-        choice_list = str(choices)
-        choice_list = choice_list.split(",")
+        choice_list = choices.split(",")
         print(choice_list)
         set_events = Events.objects.filter(type__in = choice_list)[:20].annotate(count = Count('eventregistration'))
     if (userType == "Organizer"):
@@ -159,15 +158,14 @@ def event_deregister(request, event_id):
 
 @login_required
 def setup(request):
-    if request.method == 'POST':
-        dictionary = request.POST
-        print(dictionary)
     if (getUserType(request.user.id) == "Volunteer"):
-        vol = Volunteer.objects.get(user = request.user.id)
+        if request.method == 'POST':
+            vol = Volunteer.objects.get(user = request.user.id)
+            some_var = request.POST.getlist('checks')
+            vol.preferences = some_var
+        city = vol.location
         choices = vol.preferences
-        choice_list = str(choices)
-        choice_list = choice_list.split
-        return render(request, 'hex/setup.html', {"list": choice_list})
+        return render(request, 'hex/setup.html', {"list": choices})
     return render(request, 'hex/setup.html', )
 
 

@@ -12,9 +12,11 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'index' %}"><span><img src="{%static "hex/images/dashboard.png"%}" alt="dashboard" width="25px"></span> Dashboard <span class="sr-only">(current)</span></a>
                 </li>
+                {%if userType == "Volunteer"%}
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'setup'%}"><span><img src="{%static "hex/images/settings.png"%}" alt="settings" width="25px"></span> Settings</a>
                 </li>
+                {%endif%}
                 <li class="nav-item">
                         <a class="nav-link" href="{% url 'logout' %}"><span><img src="https://image.flaticon.com/icons/svg/221/221778.svg" alt="logout" width="25px"></span> Logout</a>
                 </li>
