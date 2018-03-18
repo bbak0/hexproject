@@ -153,3 +153,17 @@ def setup(request):
         choice_list = choice_list.split
         return render(request, 'hex/setup.html', {"list": choice_list})
     return render(request, 'hex/setup.html', )
+
+
+def profile(request, userid):
+    u = User.objects.get(pk=userid)
+    type = getUserType(userid)
+    p = None
+    if type == "Volunteer":
+        p = Volunteer.objects.get(user_id = userid)
+    if type == "Organizer":
+        p = Organizer.objects.get(user_id = userid)
+    if type == "Benefactor":
+        p = Benefactor.objects.get(user_id = userid)
+    return render(request, 'hex/profile_page.html', {"user":u,
+                                                    "profile":p})
