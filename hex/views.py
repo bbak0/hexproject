@@ -5,6 +5,7 @@ from django.contrib.auth import login, authenticate
 from .models import Volunteer, Benefactor, Organizer, Events, EventRegistration
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
+from django.db.models import Count
 
 # Create your views here.
 def signup(request):
@@ -59,16 +60,17 @@ def login_view(request):
 
 @login_required
 def feed(request):
+    vol_nr = None
     userType = getUserType(request.user.id)
     if (userType == "Volunteer"):
         vol = Volunteer.objects.get(user = request.user.id)
         city = vol.location
         choices = vol.preferences
-        choices = "AA, BB, DD"
+        #choices = "AA, BB, DD"
         print(choices)
-        choice_list = choices.split(", ")
+        choice_list = str(choices)
         print(choice_list)
-        set_events = Events.objects.filter(type__in = choice_list)[:20]
+        set_events = Events.objects.filter(type__in = choice_list)[:20].annotate(count = Count('eventregistration'))
     if (userType == "Organizer"):
         set_events = Events.objects.filter(organizer_id = request.user.id)
     if (userType == "Benefactor"):
@@ -126,6 +128,4 @@ def event_deregister(request, event_id):
 
 @login_required
 def setup(request):
-    if (getUserType(request.user.id) == "Volunteer"):
-        return render(request, 'hex/setup.html', Volunteer.preferences)
-    return render(request, 'hex/setup.html',)
+    return render(request, 'hex/setup.html', )
