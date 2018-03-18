@@ -81,6 +81,7 @@ def feed(request):
         #choices = "AA, BB, DD"
         print(choices)
         choice_list = str(choices)
+        choice_list = choice_list.split(",")
         print(choice_list)
         set_events = Events.objects.filter(type__in = choice_list)[:20].annotate(count = Count('eventregistration'))
     if (userType == "Organizer"):
